@@ -13,7 +13,10 @@
     "node": ">=20.9.0"
   },
   "scripts": {
+    "search-index": "tsx scripts/build-search-index.ts",
+    "predev": "npm run search-index",
     "dev": "next dev",
+    "prebuild": "npm run search-index",
     "build": "next build",
     "preview": "npx --yes serve@latest out",
     "lint": "next lint",
@@ -27,7 +30,6 @@
     "next": "^15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "server-only": "^0.0.1",
     "zod": "^3.24.1"
   },
   "devDependencies": {

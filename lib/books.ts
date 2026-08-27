@@ -1,4 +1,5 @@
-import "server-only";
+// Build-time only: uses `node:fs`. Imported by Server Components, `next build`,
+// and the scripts in `scripts/` — never from a Client Component.
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { bookSchema, normalizeBook } from "./validation";

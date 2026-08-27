@@ -4,7 +4,7 @@ import { categoriesByGroup } from "@/lib/categories";
 import { getPublishedBooks } from "@/lib/books";
 import { PageHeader } from "@/components/page-header";
 import { SectionHeading } from "@/components/section-heading";
-import { BookGrid } from "@/components/book-grid";
+import { BookExplorer } from "@/components/book-explorer";
 import { EmptyState } from "@/components/empty-state";
 
 export const metadata = createMetadata({
@@ -63,7 +63,7 @@ export default async function BooksIndexPage() {
             .
           </EmptyState>
         ) : (
-          <BookGrid books={books} />
+          <BookExplorer books={books} showCategoryFilter />
         )}
       </section>
     </div>

@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import { siteConfig } from "@/lib/site";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeScript } from "@/components/theme-script";
+import { SearchProvider } from "@/components/search";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import "./globals.css";
@@ -63,14 +64,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-bg text-fg min-h-dvh antialiased">
         <ThemeProvider>
-          <a href="#main" className="skip-link">
-            Skip to content
-          </a>
-          <SiteHeader />
-          <main id="main" className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6">
-            {children}
-          </main>
-          <SiteFooter />
+          <SearchProvider>
+            <a href="#main" className="skip-link">
+              Skip to content
+            </a>
+            <SiteHeader />
+            <main id="main" className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6">
+              {children}
+            </main>
+            <SiteFooter />
+          </SearchProvider>
         </ThemeProvider>
       </body>
     </html>

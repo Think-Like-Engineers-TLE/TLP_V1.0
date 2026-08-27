@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { siteConfig } from "@/lib/site";
 import { Logo } from "./logo";
 import { ThemeToggle } from "./theme-toggle";
+import { HeaderSearchButton } from "./search-trigger";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -55,6 +56,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="ml-auto flex items-center gap-2">
+          <HeaderSearchButton />
           <a
             href={siteConfig.github}
             target="_blank"

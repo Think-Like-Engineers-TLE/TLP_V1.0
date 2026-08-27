@@ -1,37 +1,115 @@
 import type { Book } from "./types";
+import { slugify } from "./slug";
+import { getCategory } from "./categories";
 
 /**
- * Search index — Phase 3 will build this into a real client-side search
- * (title / author / topic / language / tag / category, per §17).
- *
- * For Phase 0 this just defines the record shape and a builder so the
- * architecture is in place. The build step can emit `public/search-index.json`
- * from `buildSearchIndex(await getAllBooks())` later.
+ * Search (§17, §58). A build step writes the index to `public/search-index.json`
+ * (see `scripts/build-search-index.ts`); the client fetches it once and runs
+ * `searchRecords` locally. The dataset is small, so no search library is needed.
  */
 
+export type SearchType = "book" | "topic" | "author";
+
 export interface SearchRecord {
-  type: "book" | "author" | "topic" | "category";
-  slug: string;
+  type: SearchType;
   title: string;
+  /** Secondary line: authors for a book, resource/book count for topics/authors. */
   subtitle?: string;
-  category?: string;
-  tags: string[];
+  href: string;
+  /** Lowercased haystack matched against the query. */
   keywords: string;
 }
 
-export function buildSearchIndex(books: Book[]): SearchRecord[] {
-  return books
+interface TopicLike {
+  slug: string;
+  label: string;
+  count: number;
+}
+interface AuthorLike {
+  slug: string;
+  name: string;
+  count: number;
+}
+
+export function buildSearchIndex(
+  books: Book[],
+  topics: TopicLike[],
+  authors: AuthorLike[],
+): SearchRecord[] {
+  const bookRecords: SearchRecord[] = books
     .filter((b) => b.status === "published")
-    .map((b) => ({
-      type: "book" as const,
-      slug: b.slug,
-      title: b.title,
-      subtitle: b.subtitle,
-      category: b.category,
-      tags: b.tags,
-      keywords: [b.title, b.subtitle, ...b.authors, b.category, ...b.tags, b.language]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase(),
-    }));
+    .map((b) => {
+      const category = getCategory(b.category);
+      return {
+        type: "book" as const,
+        title: b.title,
+        subtitle: b.authors.join(", "),
+        href: `/books/${b.category}/${b.slug}`,
+        keywords: [
+          b.title,
+          b.subtitle,
+          ...b.authors,
+          category?.label,
+          b.category,
+          ...b.tags,
+          b.language,
+          b.difficulty,
+        ]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase(),
+      };
+    });
+
+  const topicRecords: SearchRecord[] = topics.map((t) => ({
+    type: "topic" as const,
+    title: t.label,
+    subtitle: `${t.count} ${t.count === 1 ? "resource" : "resources"}`,
+    href: `/topics/${t.slug}`,
+    keywords: `${t.label} ${t.slug}`.toLowerCase(),
+  }));
+
+  const authorRecords: SearchRecord[] = authors.map((a) => ({
+    type: "author" as const,
+    title: a.name,
+    subtitle: `${a.count} ${a.count === 1 ? "book" : "books"}`,
+    href: `/authors/${a.slug}`,
+    keywords: `${a.name} ${slugify(a.name)}`.toLowerCase(),
+  }));
+
+  return [...bookRecords, ...topicRecords, ...authorRecords];
+}
+
+/** Rank records against a free-text query. All query tokens must match. */
+export function searchRecords(
+  records: SearchRecord[],
+  query: string,
+  limit = 20,
+): SearchRecord[] {
+  const tokens = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
+  if (tokens.length === 0) return [];
+
+  const scored: { record: SearchRecord; score: number }[] = [];
+
+  for (const record of records) {
+    let score = 0;
+    let matchedAll = true;
+    for (const token of tokens) {
+      const idx = record.keywords.indexOf(token);
+      if (idx === -1) {
+        matchedAll = false;
+        break;
+      }
+      // Prefer matches at the start of the title.
+      score += record.title.toLowerCase().startsWith(token) ? 10 : idx === 0 ? 6 : 3;
+    }
+    if (!matchedAll) continue;
+    if (record.type === "book") score += 2; // books rank above topics/authors on ties
+    scored.push({ record, score });
+  }
+
+  return scored
+    .sort((a, b) => b.score - a.score || a.record.title.localeCompare(b.record.title))
+    .slice(0, limit)
+    .map((s) => s.record);
 }

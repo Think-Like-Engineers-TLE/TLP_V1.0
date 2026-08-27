@@ -5,7 +5,7 @@ import { CATEGORY_SLUGS, getCategory } from "@/lib/categories";
 import { getBooksByCategory } from "@/lib/books";
 import { PageHeader } from "@/components/page-header";
 import { Breadcrumbs } from "@/components/breadcrumbs";
-import { BookGrid } from "@/components/book-grid";
+import { BookExplorer } from "@/components/book-explorer";
 import { EmptyState } from "@/components/empty-state";
 
 export const dynamicParams = false;
@@ -52,7 +52,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
           .
         </EmptyState>
       ) : (
-        <BookGrid books={books} />
+        <BookExplorer books={books} />
       )}
     </div>
   );

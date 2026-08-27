@@ -1,4 +1,4 @@
-import "server-only";
+// Build-time only (see lib/books.ts).
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { slugify } from "./slug";

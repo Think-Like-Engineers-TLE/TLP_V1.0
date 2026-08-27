@@ -4,6 +4,7 @@ import { categoriesByGroup } from "@/lib/categories";
 import { getFeaturedBooks, getRecentBooks } from "@/lib/books";
 import { getAllTopics } from "@/lib/topics";
 import { BookGrid } from "@/components/book-grid";
+import { HeroSearchButton } from "@/components/search-trigger";
 import { SectionHeading } from "@/components/section-heading";
 import { Badge, difficultyTone } from "@/components/ui/badge";
 
@@ -54,15 +55,8 @@ export default async function HomePage() {
           </Link>
         </div>
 
-        {/* Search placeholder — real search lands in Phase 3 (§17, §58). */}
         <div className="mx-auto mt-8 max-w-xl">
-          <div
-            className="border-line bg-surface text-fg-subtle flex h-11 items-center gap-2 rounded-md border px-4 text-sm"
-            aria-hidden
-          >
-            <span>Search programming books…</span>
-            <kbd className="border-line bg-bg ml-auto rounded border px-1.5 py-0.5 text-xs">/</kbd>
-          </div>
+          <HeroSearchButton />
         </div>
       </section>
 
