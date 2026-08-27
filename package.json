@@ -1,0 +1,47 @@
+{
+  "name": "think-like-programmer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A free, open-source library of legally free programming books and learning resources.",
+  "license": "MIT",
+  "homepage": "https://thinklikeprogrammer.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/think-like-programmer/think-like-programmer.git"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "preview": "npx --yes serve@latest out",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "validate:books": "tsx scripts/validate-books.ts",
+    "validate": "npm run validate:books && npm run typecheck && npm run lint"
+  },
+  "dependencies": {
+    "next": "^15.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.10.7",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^15.1.6",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.10",
+    "tailwindcss": "^4.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "wrangler": "^3.103.2"
+  }
+}
