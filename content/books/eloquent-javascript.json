@@ -1,0 +1,34 @@
+{
+  "slug": "eloquent-javascript",
+  "title": "Eloquent JavaScript",
+  "subtitle": "A Modern Introduction to Programming",
+  "author": "Marijn Haverbeke",
+  "description": "A book about JavaScript, programming, and the wonders of the digital. It dives into the language in detail, teaching programming fundamentals alongside browser APIs and Node.js, with exercises and project chapters.",
+  "category": "javascript",
+  "subcategory": "Language Fundamentals",
+  "tags": ["javascript", "web", "programming", "beginner"],
+  "language": "English",
+  "difficulty": "Intermediate",
+  "publicationYear": 2024,
+  "pages": 462,
+  "format": "PDF",
+  "license": {
+    "type": "creative_commons",
+    "name": "Creative Commons Attribution-NonCommercial 3.0 Unported",
+    "url": "https://creativecommons.org/licenses/by-nc/3.0/",
+    "redistributionAllowed": true,
+    "note": "The author releases the book under CC BY-NC. Non-commercial redistribution with attribution is permitted."
+  },
+  "source": {
+    "name": "Official book website (eloquentjavascript.net)",
+    "url": "https://eloquentjavascript.net/"
+  },
+  "download": {
+    "url": "https://eloquentjavascript.net/Eloquent_JavaScript.pdf",
+    "size": "~4 MB"
+  },
+  "officialUrl": "https://eloquentjavascript.net/",
+  "featured": true,
+  "status": "draft",
+  "addedAt": "2026-08-27"
+}
