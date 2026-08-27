@@ -107,14 +107,6 @@ export default async function BookDetailPage({
                 Download {book.format}
                 {book.download.size ? ` · ${book.download.size}` : ""}
               </a>
-              <a
-                href={book.officialUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="border-line bg-bg text-fg hover:border-fg-subtle inline-flex h-11 items-center rounded-md border px-5 font-medium"
-              >
-                Official Source ↗
-              </a>
             </div>
             <dl className="text-fg-subtle mt-3 grid grid-cols-[5rem_1fr] gap-x-3 gap-y-1 text-xs">
               <dt>License</dt>
