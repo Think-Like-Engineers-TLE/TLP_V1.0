@@ -21,11 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   });
 }
 
-export default async function CategoryPage({
-  params,
-}: {
-  params: Promise<{ category: string }>;
-}) {
+export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
   const { category } = await params;
   const cat = getCategory(category);
   if (!cat) notFound();
@@ -41,7 +37,7 @@ export default async function CategoryPage({
       />
 
       {books.length === 0 ? (
-        <div className="rounded-lg border border-dashed border-line bg-surface/50 p-6 text-sm text-fg-muted">
+        <div className="border-line bg-surface/50 text-fg-muted rounded-lg border border-dashed p-6 text-sm">
           No resources in this category yet.{" "}
           <Link href="/contribute" className="text-primary hover:underline">
             Contribute one
@@ -54,11 +50,11 @@ export default async function CategoryPage({
             <li key={book.slug}>
               <Link
                 href={`/books/${book.category}/${book.slug}`}
-                className="flex h-full flex-col rounded-lg border border-line bg-surface p-4 transition-colors hover:border-fg-subtle"
+                className="border-line bg-surface hover:border-fg-subtle flex h-full flex-col rounded-lg border p-4 transition-colors"
               >
-                <span className="font-medium text-fg">{book.title}</span>
-                <span className="mt-1 text-sm text-fg-muted">{book.authors.join(", ")}</span>
-                <span className="mt-3 font-mono text-xs text-fg-subtle">
+                <span className="text-fg font-medium">{book.title}</span>
+                <span className="text-fg-muted mt-1 text-sm">{book.authors.join(", ")}</span>
+                <span className="text-fg-subtle mt-3 font-mono text-xs">
                   {cat.label} • {book.difficulty} • {book.format}
                 </span>
               </Link>

@@ -39,12 +39,12 @@ export default function ContributePage() {
       />
 
       <section className="mb-8">
-        <h2 className="mb-3 text-lg font-semibold text-fg">Ways to contribute</h2>
+        <h2 className="text-fg mb-3 text-lg font-semibold">Ways to contribute</h2>
         <ul className="grid gap-2 sm:grid-cols-2">
           {CONTRIBUTIONS.map((c) => (
             <li
               key={c}
-              className="rounded-md border border-line bg-surface px-3 py-2 text-sm text-fg-muted"
+              className="border-line bg-surface text-fg-muted rounded-md border px-3 py-2 text-sm"
             >
               {c}
             </li>
@@ -53,11 +53,11 @@ export default function ContributePage() {
       </section>
 
       <section className="mb-8">
-        <h2 className="mb-3 text-lg font-semibold text-fg">Contribution workflow</h2>
+        <h2 className="text-fg mb-3 text-lg font-semibold">Contribution workflow</h2>
         <ol className="flex flex-col gap-2">
           {WORKFLOW.map((step, i) => (
-            <li key={step} className="flex gap-3 text-sm text-fg-muted">
-              <span className="font-mono text-fg-subtle">{String(i + 1).padStart(2, "0")}</span>
+            <li key={step} className="text-fg-muted flex gap-3 text-sm">
+              <span className="text-fg-subtle font-mono">{String(i + 1).padStart(2, "0")}</span>
               <span>{step}</span>
             </li>
           ))}
@@ -65,11 +65,16 @@ export default function ContributePage() {
       </section>
 
       <section>
-        <h2 className="mb-2 text-lg font-semibold text-fg">Adding a book</h2>
-        <p className="text-sm text-fg-muted">
+        <h2 className="text-fg mb-2 text-lg font-semibold">Adding a book</h2>
+        <p className="text-fg-muted text-sm">
           Book entries are JSON files in <code>content/books/</code>. See{" "}
           <code>content/books/README.md</code> and <code>CONTRIBUTING.md</code> in the{" "}
-          <a href={siteConfig.github} target="_blank" rel="noreferrer" className="text-primary hover:underline">
+          <a
+            href={siteConfig.github}
+            target="_blank"
+            rel="noreferrer"
+            className="text-primary hover:underline"
+          >
             repository
           </a>{" "}
           for the schema and rules. CI validates every entry automatically.

@@ -27,20 +27,19 @@ export default function HomePage() {
     <div className="flex flex-col gap-16">
       {/* Hero */}
       <section className="pt-6 text-center sm:pt-12">
-        <p className="font-mono text-sm text-fg-subtle">&lt;TLP/&gt;</p>
-        <h1 className="mt-4 text-4xl font-bold tracking-tight text-fg sm:text-6xl">
+        <p className="text-fg-subtle font-mono text-sm">&lt;TLP/&gt;</p>
+        <h1 className="text-fg mt-4 text-4xl font-bold tracking-tight sm:text-6xl">
           Think Like Programmer
         </h1>
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-fg-muted">
-          A free library for people who love to build with code. Explore programming books,
-          computer science resources, and developer knowledge — freely available from a growing
-          open library.
+        <p className="text-fg-muted mx-auto mt-4 max-w-2xl text-lg">
+          A free library for people who love to build with code. Explore programming books, computer
+          science resources, and developer knowledge — freely available from a growing open library.
         </p>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Link
             href="/books"
-            className="inline-flex h-11 items-center rounded-md bg-primary px-5 font-medium text-primary-fg transition-colors hover:bg-primary-hover"
+            className="bg-primary text-primary-fg hover:bg-primary-hover inline-flex h-11 items-center rounded-md px-5 font-medium transition-colors"
           >
             Explore Books
           </Link>
@@ -48,13 +47,13 @@ export default function HomePage() {
             href={siteConfig.github}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex h-11 items-center rounded-md border border-line bg-surface px-5 font-medium text-fg transition-colors hover:border-fg-subtle"
+            className="border-line bg-surface text-fg hover:border-fg-subtle inline-flex h-11 items-center rounded-md border px-5 font-medium transition-colors"
           >
             View on GitHub ↗
           </a>
           <Link
             href="/contribute"
-            className="inline-flex h-11 items-center px-2 font-medium text-fg-muted underline-offset-4 hover:text-fg hover:underline"
+            className="text-fg-muted hover:text-fg inline-flex h-11 items-center px-2 font-medium underline-offset-4 hover:underline"
           >
             Contribute a Resource
           </Link>
@@ -63,18 +62,18 @@ export default function HomePage() {
         {/* Search placeholder — real search lands in Phase 3 (§17, §58). */}
         <div className="mx-auto mt-8 max-w-xl">
           <div
-            className="flex h-11 items-center gap-2 rounded-md border border-line bg-surface px-4 text-sm text-fg-subtle"
+            className="border-line bg-surface text-fg-subtle flex h-11 items-center gap-2 rounded-md border px-4 text-sm"
             aria-hidden
           >
             <span>Search programming books…</span>
-            <kbd className="ml-auto rounded border border-line bg-bg px-1.5 py-0.5 text-xs">/</kbd>
+            <kbd className="border-line bg-bg ml-auto rounded border px-1.5 py-0.5 text-xs">/</kbd>
           </div>
         </div>
       </section>
 
       {/* Popular topics */}
       <section>
-        <h2 className="mb-4 text-sm font-semibold uppercase tracking-widest text-fg-subtle">
+        <h2 className="text-fg-subtle mb-4 text-sm font-semibold tracking-widest uppercase">
           Popular Topics
         </h2>
         <ul className="flex flex-wrap gap-2">
@@ -82,7 +81,7 @@ export default function HomePage() {
             <li key={c.slug}>
               <Link
                 href={`/books/${c.slug}`}
-                className="inline-flex items-center rounded-full border border-line bg-surface px-3 py-1.5 text-sm text-fg-muted transition-colors hover:border-fg-subtle hover:text-fg"
+                className="border-line bg-surface text-fg-muted hover:border-fg-subtle hover:text-fg inline-flex items-center rounded-full border px-3 py-1.5 text-sm transition-colors"
               >
                 {c.label}
               </Link>
@@ -96,10 +95,10 @@ export default function HomePage() {
         {["Featured Books", "Recently Added", "Explore the Library"].map((label) => (
           <div
             key={label}
-            className="rounded-lg border border-dashed border-line bg-surface/50 p-6"
+            className="border-line bg-surface/50 rounded-lg border border-dashed p-6"
           >
-            <h2 className="text-sm font-semibold text-fg">{label}</h2>
-            <p className="mt-2 text-xs text-fg-subtle">
+            <h2 className="text-fg text-sm font-semibold">{label}</h2>
+            <p className="text-fg-subtle mt-2 text-xs">
               Populated once book content and the library UI land (Phase 1–2).
             </p>
           </div>

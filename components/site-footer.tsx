@@ -3,14 +3,14 @@ import { siteConfig } from "@/lib/site";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-line bg-surface/40">
+    <footer className="border-line bg-surface/40 border-t">
       <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
           <div className="max-w-md">
-            <p className="font-mono text-sm text-fg">&lt;TLP/&gt;</p>
-            <p className="mt-2 text-sm leading-relaxed text-fg-muted">
-              All resources are provided according to their respective licenses or permissions.
-              TLP does not claim ownership of third-party books, content, trademarks, or copyrights.
+            <p className="text-fg font-mono text-sm">&lt;TLP/&gt;</p>
+            <p className="text-fg-muted mt-2 text-sm leading-relaxed">
+              All resources are provided according to their respective licenses or permissions. TLP
+              does not claim ownership of third-party books, content, trademarks, or copyrights.
             </p>
           </div>
 
@@ -37,7 +37,7 @@ export function SiteFooter() {
           </nav>
         </div>
 
-        <p className="mt-8 border-t border-line pt-6 text-xs text-fg-subtle">
+        <p className="border-line text-fg-subtle mt-8 border-t pt-6 text-xs">
           Open Source • Free • Developer Focused —{" "}
           <span className="font-mono">{siteConfig.domain}</span>
         </p>

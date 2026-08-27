@@ -10,7 +10,6 @@
   "language": "English",
   "difficulty": "Intermediate",
   "publicationYear": 2024,
-  "pages": 462,
   "format": "PDF",
   "license": {
     "type": "creative_commons",
@@ -24,11 +23,10 @@
     "url": "https://eloquentjavascript.net/"
   },
   "download": {
-    "url": "https://eloquentjavascript.net/Eloquent_JavaScript.pdf",
-    "size": "~4 MB"
+    "url": "https://eloquentjavascript.net/Eloquent_JavaScript.pdf"
   },
   "officialUrl": "https://eloquentjavascript.net/",
   "featured": true,
-  "status": "draft",
+  "status": "published",
   "addedAt": "2026-08-27"
 }

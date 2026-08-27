@@ -28,7 +28,7 @@ export default async function BooksIndexPage() {
       <div className="flex flex-col gap-10">
         {groups.map(([group, categories]) => (
           <section key={group}>
-            <h2 className="mb-3 text-sm font-semibold uppercase tracking-widest text-fg-subtle">
+            <h2 className="text-fg-subtle mb-3 text-sm font-semibold tracking-widest uppercase">
               {group}
             </h2>
             <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
@@ -36,10 +36,10 @@ export default async function BooksIndexPage() {
                 <li key={c.slug}>
                   <Link
                     href={`/books/${c.slug}`}
-                    className="flex items-center justify-between rounded-md border border-line bg-surface px-4 py-3 text-sm transition-colors hover:border-fg-subtle"
+                    className="border-line bg-surface hover:border-fg-subtle flex items-center justify-between rounded-md border px-4 py-3 text-sm transition-colors"
                   >
                     <span className="text-fg">{c.label}</span>
-                    <span className="font-mono text-xs text-fg-subtle">
+                    <span className="text-fg-subtle font-mono text-xs">
                       {counts.get(c.slug) ?? 0}
                     </span>
                   </Link>

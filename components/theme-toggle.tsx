@@ -22,7 +22,7 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={next}
-      className="inline-flex h-9 items-center gap-2 rounded-md border border-line bg-surface px-3 text-sm text-fg-muted transition-colors hover:text-fg"
+      className="border-line bg-surface text-fg-muted hover:text-fg inline-flex h-9 items-center gap-2 rounded-md border px-3 text-sm transition-colors"
       aria-label={`Theme: ${LABEL[preference]}. Click to change.`}
       title={`Theme: ${LABEL[preference]}`}
     >

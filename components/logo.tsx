@@ -5,7 +5,7 @@ export function Logo({ className = "" }: { className?: string }) {
   return (
     <Link
       href="/"
-      className={`inline-flex items-center font-mono text-lg font-semibold tracking-tight text-fg ${className}`}
+      className={`text-fg inline-flex items-center font-mono text-lg font-semibold tracking-tight ${className}`}
       aria-label="Think Like Programmer — home"
     >
       <span className="text-fg-subtle">&lt;</span>

@@ -12,7 +12,7 @@ export default function LegalPage() {
     <div className="max-w-2xl">
       <PageHeader title="Legal & Licensing" />
 
-      <div className="flex flex-col gap-6 text-fg-muted">
+      <div className="text-fg-muted flex flex-col gap-6">
         <p>
           All resources listed on {siteConfig.name} are provided according to their respective
           licenses or permissions. TLP does not claim ownership of third-party books, content,
@@ -20,7 +20,7 @@ export default function LegalPage() {
         </p>
 
         <section>
-          <h2 className="mb-2 text-lg font-semibold text-fg">Why a resource is listed</h2>
+          <h2 className="text-fg mb-2 text-lg font-semibold">Why a resource is listed</h2>
           <p>Each entry is listed on one of the following bases:</p>
           <ul className="mt-2 list-disc pl-5">
             <li>The work is in the public domain.</li>
@@ -35,11 +35,16 @@ export default function LegalPage() {
         </section>
 
         <section>
-          <h2 className="mb-2 text-lg font-semibold text-fg">Reporting a concern</h2>
+          <h2 className="text-fg mb-2 text-lg font-semibold">Reporting a concern</h2>
           <p>
             If you believe a resource is listed incorrectly — a copyright concern, a broken
             download, an incorrect license, or wrong information — please open an issue on{" "}
-            <a href={siteConfig.github} target="_blank" rel="noreferrer" className="text-primary hover:underline">
+            <a
+              href={siteConfig.github}
+              target="_blank"
+              rel="noreferrer"
+              className="text-primary hover:underline"
+            >
               GitHub
             </a>
             . No account on this site is required.
@@ -47,7 +52,7 @@ export default function LegalPage() {
         </section>
 
         <section>
-          <h2 className="mb-2 text-lg font-semibold text-fg">Site license</h2>
+          <h2 className="text-fg mb-2 text-lg font-semibold">Site license</h2>
           <p>
             The website source code is released under the MIT License. The book metadata index is
             released under CC BY 4.0. Listed resources retain their own licenses.

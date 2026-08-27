@@ -18,9 +18,7 @@ type Failure = { file: string; message: string };
 async function main() {
   let files: string[];
   try {
-    files = (await fs.readdir(booksDir)).filter(
-      (f) => f.endsWith(".json") && !f.startsWith("_"),
-    );
+    files = (await fs.readdir(booksDir)).filter((f) => f.endsWith(".json") && !f.startsWith("_"));
   } catch {
     console.log("No content/books directory — nothing to validate.");
     return;

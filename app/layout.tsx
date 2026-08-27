@@ -61,7 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <ThemeScript />
       </head>
-      <body className="min-h-dvh bg-bg text-fg antialiased">
+      <body className="bg-bg text-fg min-h-dvh antialiased">
         <ThemeProvider>
           <a href="#main" className="skip-link">
             Skip to content

@@ -11,11 +11,10 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href);
+  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-bg/80 backdrop-blur">
+    <header className="border-line bg-bg/80 sticky top-0 z-40 border-b backdrop-blur">
       <div className="mx-auto flex h-14 w-full max-w-6xl items-center gap-4 px-4 sm:px-6">
         <Logo />
 
@@ -26,7 +25,7 @@ export function SiteHeader() {
                 <Link
                   href={item.href}
                   aria-current={isActive(item.href) ? "page" : undefined}
-                  className={`rounded-md px-3 py-2 text-sm transition-colors hover:text-fg ${
+                  className={`hover:text-fg rounded-md px-3 py-2 text-sm transition-colors ${
                     isActive(item.href) ? "text-fg" : "text-fg-muted"
                   }`}
                 >
@@ -42,7 +41,7 @@ export function SiteHeader() {
             href={siteConfig.github}
             target="_blank"
             rel="noreferrer"
-            className="hidden h-9 items-center gap-1.5 rounded-md border border-line bg-surface px-3 text-sm text-fg-muted transition-colors hover:text-fg sm:inline-flex"
+            className="border-line bg-surface text-fg-muted hover:text-fg hidden h-9 items-center gap-1.5 rounded-md border px-3 text-sm transition-colors sm:inline-flex"
           >
             GitHub
             <span aria-hidden>↗</span>
@@ -50,7 +49,7 @@ export function SiteHeader() {
           <ThemeToggle />
           <button
             type="button"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-line bg-surface text-fg-muted md:hidden"
+            className="border-line bg-surface text-fg-muted inline-flex h-9 w-9 items-center justify-center rounded-md border md:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
             aria-label="Toggle navigation menu"
@@ -62,18 +61,14 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <nav
-          id="mobile-nav"
-          aria-label="Mobile"
-          className="border-t border-line bg-bg md:hidden"
-        >
+        <nav id="mobile-nav" aria-label="Mobile" className="border-line bg-bg border-t md:hidden">
           <ul className="mx-auto flex w-full max-w-6xl flex-col px-4 py-2 sm:px-6">
             {siteConfig.nav.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-md px-3 py-2.5 text-sm text-fg-muted hover:bg-surface hover:text-fg"
+                  className="text-fg-muted hover:bg-surface hover:text-fg block rounded-md px-3 py-2.5 text-sm"
                 >
                   {item.label}
                 </Link>
@@ -84,7 +79,7 @@ export function SiteHeader() {
                 href={siteConfig.github}
                 target="_blank"
                 rel="noreferrer"
-                className="block rounded-md px-3 py-2.5 text-sm text-fg-muted hover:bg-surface hover:text-fg"
+                className="text-fg-muted hover:bg-surface hover:text-fg block rounded-md px-3 py-2.5 text-sm"
               >
                 GitHub ↗
               </a>

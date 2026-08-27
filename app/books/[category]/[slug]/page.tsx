@@ -66,7 +66,7 @@ export default async function BookDetailPage({
           href={book.download.url}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex h-11 items-center rounded-md bg-primary px-5 font-medium text-primary-fg hover:bg-primary-hover"
+          className="bg-primary text-primary-fg hover:bg-primary-hover inline-flex h-11 items-center rounded-md px-5 font-medium"
         >
           Download {book.format}
           {book.download.size ? ` • ${book.download.size}` : ""}
@@ -75,19 +75,19 @@ export default async function BookDetailPage({
           href={book.officialUrl}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex h-11 items-center rounded-md border border-line bg-surface px-5 font-medium text-fg hover:border-fg-subtle"
+          className="border-line bg-surface text-fg hover:border-fg-subtle inline-flex h-11 items-center rounded-md border px-5 font-medium"
         >
           Official Source ↗
         </a>
       </div>
 
       <section className="mb-8">
-        <h2 className="mb-2 text-lg font-semibold text-fg">Description</h2>
-        <p className="max-w-2xl text-fg-muted">{book.description}</p>
+        <h2 className="text-fg mb-2 text-lg font-semibold">Description</h2>
+        <p className="text-fg-muted max-w-2xl">{book.description}</p>
       </section>
 
       <section className="mb-8">
-        <h2 className="mb-3 text-lg font-semibold text-fg">Book information</h2>
+        <h2 className="text-fg mb-3 text-lg font-semibold">Book information</h2>
         <dl className="grid max-w-2xl grid-cols-[8rem_1fr] gap-x-4 gap-y-2 text-sm">
           {info
             .filter(([, v]) => Boolean(v))
@@ -102,12 +102,12 @@ export default async function BookDetailPage({
 
       {book.tags.length > 0 && (
         <section className="mb-8">
-          <h2 className="mb-3 text-lg font-semibold text-fg">Topics</h2>
+          <h2 className="text-fg mb-3 text-lg font-semibold">Topics</h2>
           <ul className="flex flex-wrap gap-2">
             {book.tags.map((t) => (
               <li
                 key={t}
-                className="rounded-full border border-line bg-surface px-3 py-1 font-mono text-xs text-fg-muted"
+                className="border-line bg-surface text-fg-muted rounded-full border px-3 py-1 font-mono text-xs"
               >
                 {t}
               </li>
@@ -116,9 +116,9 @@ export default async function BookDetailPage({
         </section>
       )}
 
-      <section className="rounded-lg border border-line bg-surface/50 p-5">
-        <h2 className="mb-2 text-lg font-semibold text-fg">License</h2>
-        <p className="text-sm text-fg">
+      <section className="border-line bg-surface/50 rounded-lg border p-5">
+        <h2 className="text-fg mb-2 text-lg font-semibold">License</h2>
+        <p className="text-fg text-sm">
           {LICENSE_LABEL[book.license.type]} — {book.license.name}
           {book.license.url && (
             <>
@@ -134,14 +134,12 @@ export default async function BookDetailPage({
             </>
           )}
         </p>
-        <p className="mt-2 text-sm text-fg-muted">
+        <p className="text-fg-muted mt-2 text-sm">
           {book.license.redistributionAllowed
             ? "This resource is listed because its license permits redistribution."
             : "This resource is listed with a link to its official source; TLP does not host the file."}
         </p>
-        {book.license.note && (
-          <p className="mt-2 text-sm text-fg-muted">{book.license.note}</p>
-        )}
+        {book.license.note && <p className="text-fg-muted mt-2 text-sm">{book.license.note}</p>}
       </section>
 
       <p className="mt-10 text-sm">
