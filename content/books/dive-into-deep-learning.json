@@ -1,0 +1,31 @@
+{
+  "slug": "dive-into-deep-learning",
+  "title": "Dive into Deep Learning",
+  "author": "Aston Zhang, Zachary C. Lipton, Mu Li, Alexander J. Smola",
+  "description": "An interactive deep learning textbook combining explanations, mathematics, and runnable code (PyTorch, NumPy, JAX, and TensorFlow). Covers linear and softmax regression, MLPs, CNNs, RNNs, attention and transformers, and more. Adopted at 500+ universities.",
+  "category": "deep-learning",
+  "tags": ["deep-learning", "machine-learning", "python", "neural-networks"],
+  "language": "English",
+  "difficulty": "Advanced",
+  "publicationYear": 2023,
+  "format": "PDF",
+  "license": {
+    "type": "creative_commons",
+    "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "redistributionAllowed": true,
+    "note": "Code samples are separately available under a modified MIT license."
+  },
+  "source": {
+    "name": "d2l.ai (official)",
+    "url": "https://d2l.ai/"
+  },
+  "download": {
+    "url": "https://d2l.ai/d2l-en.pdf",
+    "size": "43 MB"
+  },
+  "officialUrl": "https://d2l.ai/",
+  "featured": true,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

@@ -1,0 +1,30 @@
+{
+  "slug": "operating-systems-three-easy-pieces",
+  "title": "Operating Systems: Three Easy Pieces",
+  "author": "Remzi H. Arpaci-Dusseau, Andrea C. Arpaci-Dusseau",
+  "description": "A widely used operating systems textbook organized around three themes: virtualization (CPU and memory), concurrency (locks and condition variables), and persistence (disks, RAID, and file systems).",
+  "category": "operating-systems",
+  "tags": ["operating-systems", "computer-science", "concurrency"],
+  "language": "English",
+  "difficulty": "Advanced",
+  "publicationYear": 2023,
+  "format": "PDF",
+  "license": {
+    "type": "official_free_distribution",
+    "name": "Free to read (© Arpaci-Dusseau); official site requested to be linked, not mirrored",
+    "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+    "redistributionAllowed": false,
+    "note": "The authors state the book \"is and will always be free in PDF form\" but ask that instructors link to the official site rather than host local copies, so TLP links to the official page (chapter PDFs)."
+  },
+  "source": {
+    "name": "University of Wisconsin–Madison (author's page)",
+    "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/"
+  },
+  "download": {
+    "url": "https://pages.cs.wisc.edu/~remzi/OSTEP/"
+  },
+  "officialUrl": "https://pages.cs.wisc.edu/~remzi/OSTEP/",
+  "featured": true,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

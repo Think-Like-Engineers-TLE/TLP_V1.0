@@ -1,0 +1,32 @@
+{
+  "slug": "site-reliability-engineering",
+  "title": "Site Reliability Engineering",
+  "subtitle": "How Google Runs Production Systems",
+  "author": "Betsy Beyer, Chris Jones, Jennifer Petoff, Niall Richard Murphy (eds.)",
+  "description": "Google's account of how it runs large-scale production systems reliably: monitoring, capacity planning, incident response, postmortems, release engineering, and the SRE approach to managing risk at scale.",
+  "category": "devops",
+  "subcategory": "SRE",
+  "tags": ["devops", "sre", "reliability", "operations"],
+  "language": "English",
+  "difficulty": "Advanced",
+  "publicationYear": 2016,
+  "format": "HTML",
+  "license": {
+    "type": "official_free_distribution",
+    "name": "Free to read (© Google); Creative Commons Attribution-NonCommercial-NoDerivatives 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "redistributionAllowed": false,
+    "note": "Google publishes the full text free online at sre.google/books; no official downloadable PDF, so TLP links to the official page."
+  },
+  "source": {
+    "name": "Google SRE (official)",
+    "url": "https://sre.google/books/"
+  },
+  "download": {
+    "url": "https://sre.google/sre-book/table-of-contents/"
+  },
+  "officialUrl": "https://sre.google/sre-book/table-of-contents/",
+  "featured": false,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

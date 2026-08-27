@@ -1,0 +1,33 @@
+{
+  "slug": "database-design-watt",
+  "title": "Database Design",
+  "author": "Adrienne Watt, Nelson Eng",
+  "description": "An open textbook covering database design from the ground up: the relational model, entity-relationship modeling, normalization, SQL, transactions, and concurrency control, with review exercises per chapter.",
+  "category": "databases",
+  "subcategory": "Design",
+  "tags": ["databases", "sql", "database-design", "beginner"],
+  "language": "English",
+  "difficulty": "Beginner",
+  "publicationYear": 2014,
+  "pages": 142,
+  "format": "PDF",
+  "license": {
+    "type": "creative_commons",
+    "name": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "redistributionAllowed": true,
+    "note": "Published by the BCcampus Open Textbook Project."
+  },
+  "source": {
+    "name": "BCcampus Open Textbook Project",
+    "url": "https://opentextbc.ca/dbdesign01/"
+  },
+  "download": {
+    "url": "https://resources.saylor.org/wwwresources/archived/site/wp-content/uploads/2014/12/CS403-1.10-Database-Design-2nd-Edition-CCBY.pdf",
+    "size": "3 MB"
+  },
+  "officialUrl": "https://opentextbc.ca/dbdesign01/",
+  "featured": false,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "algorithms-jeff-erickson",
+  "title": "Algorithms",
+  "author": "Jeff Erickson",
+  "description": "A rigorous algorithms textbook built from the author's courses at the University of Illinois. Covers recursion, dynamic programming, greedy algorithms, graphs, NP-hardness, and more, emphasizing intuition and the problem-solving process alongside formal proofs.",
+  "category": "algorithms",
+  "tags": ["algorithms", "computer-science", "complexity"],
+  "language": "English",
+  "difficulty": "Advanced",
+  "publicationYear": 2019,
+  "pages": 472,
+  "format": "PDF",
+  "license": {
+    "type": "creative_commons",
+    "name": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "redistributionAllowed": true,
+    "note": "Stated by the author on the book's official page."
+  },
+  "source": {
+    "name": "University of Illinois (author's page)",
+    "url": "https://jeffe.cs.illinois.edu/teaching/algorithms/"
+  },
+  "download": {
+    "url": "https://jeffe.cs.illinois.edu/teaching/algorithms/book/Algorithms-JeffE.pdf",
+    "size": "24 MB"
+  },
+  "officialUrl": "https://jeffe.cs.illinois.edu/teaching/algorithms/",
+  "featured": true,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

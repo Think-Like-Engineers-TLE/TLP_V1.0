@@ -1,0 +1,34 @@
+{
+  "slug": "think-python",
+  "title": "Think Python",
+  "subtitle": "How to Think Like a Computer Scientist",
+  "author": "Allen B. Downey",
+  "description": "A concise introduction to Python and computer-science thinking, built around problem decomposition. Covers variables, functions, conditionals, recursion, iteration, strings, lists, dictionaries, and a light introduction to classes and objects.",
+  "category": "python",
+  "subcategory": "Introductory",
+  "tags": ["python", "programming", "computer-science", "beginner"],
+  "language": "English",
+  "difficulty": "Beginner",
+  "publicationYear": 2015,
+  "pages": 290,
+  "format": "PDF",
+  "license": {
+    "type": "creative_commons",
+    "name": "Creative Commons Attribution-NonCommercial 3.0 Unported",
+    "url": "https://creativecommons.org/licenses/by-nc/3.0/",
+    "redistributionAllowed": true,
+    "note": "Same license Downey uses for his other Green Tea Press books."
+  },
+  "source": {
+    "name": "Green Tea Press",
+    "url": "https://greenteapress.com/wp/think-python-2e/"
+  },
+  "download": {
+    "url": "http://greenteapress.com/thinkpython2/thinkpython2.pdf",
+    "size": "900 KB"
+  },
+  "officialUrl": "https://greenteapress.com/wp/think-python-2e/",
+  "featured": false,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

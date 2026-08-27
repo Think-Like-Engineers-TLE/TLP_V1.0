@@ -1,0 +1,32 @@
+{
+  "slug": "linux-command-line",
+  "title": "The Linux Command Line",
+  "subtitle": "A Complete Introduction",
+  "author": "William E. Shotts, Jr.",
+  "description": "A thorough guide to the Linux command line: navigation, file manipulation, permissions, package management, I/O redirection, and shell scripting, from first commands through writing real scripts.",
+  "category": "linux",
+  "tags": ["linux", "command-line", "shell-scripting", "beginner"],
+  "language": "English",
+  "difficulty": "Beginner",
+  "publicationYear": 2025,
+  "pages": 555,
+  "format": "PDF",
+  "license": {
+    "type": "creative_commons",
+    "name": "Creative Commons Attribution-NonCommercial-NoDerivatives 3.0",
+    "url": "https://creativecommons.org/licenses/by-nc-nd/3.0/",
+    "redistributionAllowed": true,
+    "note": "Verbatim redistribution of the free edition is permitted; derivatives are not."
+  },
+  "source": {
+    "name": "linuxcommand.org (official)",
+    "url": "https://linuxcommand.org/tlcl.php"
+  },
+  "download": {
+    "url": "https://sourceforge.net/projects/linuxcommand/files/TLCL/25.12/TLCL-25.12A.pdf/download"
+  },
+  "officialUrl": "https://linuxcommand.org/tlcl.php",
+  "featured": true,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}
