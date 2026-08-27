@@ -10,6 +10,7 @@
   "publicationYear": 2012,
   "pages": 400,
   "format": "PDF",
+  "cover": "/covers/architecture-of-open-source-applications.jpg",
   "license": {
     "type": "creative_commons",
     "name": "Creative Commons Attribution 3.0 Unported",

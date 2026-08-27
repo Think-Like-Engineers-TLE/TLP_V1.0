@@ -12,6 +12,7 @@
   "publicationYear": 2015,
   "pages": 290,
   "format": "PDF",
+  "cover": "/covers/think-python.jpg",
   "license": {
     "type": "creative_commons",
     "name": "Creative Commons Attribution-NonCommercial 3.0 Unported",

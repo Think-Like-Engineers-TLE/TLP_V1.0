@@ -11,6 +11,7 @@
   "difficulty": "Beginner",
   "publicationYear": 2020,
   "format": "HTML",
+  "cover": "/covers/automate-boring-stuff-python.jpg",
   "license": {
     "type": "creative_commons",
     "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0",

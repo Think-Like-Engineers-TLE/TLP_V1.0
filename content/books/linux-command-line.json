@@ -11,6 +11,7 @@
   "publicationYear": 2025,
   "pages": 555,
   "format": "PDF",
+  "cover": "/covers/linux-command-line.jpg",
   "license": {
     "type": "creative_commons",
     "name": "Creative Commons Attribution-NonCommercial-NoDerivatives 3.0",
