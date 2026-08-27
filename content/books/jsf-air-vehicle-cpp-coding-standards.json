@@ -1,0 +1,33 @@
+{
+  "slug": "jsf-air-vehicle-cpp-coding-standards",
+  "title": "JSF Air Vehicle C++ Coding Standards",
+  "subtitle": "For the System Development and Demonstration Program",
+  "author": "Lockheed Martin Corporation",
+  "description": "The C++ coding standard developed for the Joint Strike Fighter (F-35) air vehicle software. A widely cited reference for safety-critical C++: 200+ rules restricting language features for reliability, with rationale for each.",
+  "category": "cpp",
+  "subcategory": "Coding Standards",
+  "tags": ["cpp", "coding-standards", "safety-critical", "embedded"],
+  "language": "English",
+  "difficulty": "Advanced",
+  "publicationYear": 2005,
+  "pages": 142,
+  "format": "PDF",
+  "license": {
+    "type": "official_free_distribution",
+    "name": "Approved for public release; distribution unlimited (Lockheed Martin)",
+    "redistributionAllowed": true,
+    "note": "Distribution Statement A on the cover page: \"Approved for public release; distribution is unlimited.\""
+  },
+  "source": {
+    "name": "Bjarne Stroustrup's website",
+    "url": "https://www.stroustrup.com/JSF-AV-rules.pdf"
+  },
+  "download": {
+    "url": "https://www.stroustrup.com/JSF-AV-rules.pdf",
+    "size": "800 KB"
+  },
+  "officialUrl": "https://www.stroustrup.com/JSF-AV-rules.pdf",
+  "featured": false,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

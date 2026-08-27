@@ -1,0 +1,35 @@
+{
+  "slug": "fundamentals-of-programming-with-csharp",
+  "title": "Fundamentals of Computer Programming with C#",
+  "subtitle": "Programming Principles, Object-Oriented Programming, Data Structures",
+  "author": "Svetlin Nakov, Veselin Kolev, Nakov's Team",
+  "description": "A large, thorough introduction to programming using C#. Covers the language and .NET from first principles, then data structures, algorithms, recursion, OOP, exception handling, and writing high-quality code, with hundreds of worked examples and exercises.",
+  "category": "csharp",
+  "subcategory": "Language Fundamentals",
+  "tags": ["csharp", "dotnet", "programming", "data-structures", "algorithms", "beginner"],
+  "language": "English",
+  "difficulty": "All Levels",
+  "publicationYear": 2013,
+  "pages": 1122,
+  "format": "PDF",
+  "cover": "/covers/fundamentals-of-programming-with-csharp.jpg",
+  "license": {
+    "type": "creative_commons",
+    "name": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International",
+    "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "redistributionAllowed": true,
+    "note": "The authors distribute the book free for non-commercial use; verbatim redistribution is permitted with attribution."
+  },
+  "source": {
+    "name": "introprogramming.info (official site)",
+    "url": "https://introprogramming.info/english-intro-csharp-book/"
+  },
+  "download": {
+    "url": "https://introprogramming.info/wp-content/uploads/2013/07/Books/CSharpEn/Fundamentals-of-Computer-Programming-with-CSharp-Nakov-eBook-v2013.pdf",
+    "size": "11.6 MB"
+  },
+  "officialUrl": "https://introprogramming.info/english-intro-csharp-book/",
+  "featured": true,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

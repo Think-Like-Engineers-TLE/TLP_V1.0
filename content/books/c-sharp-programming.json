@@ -1,0 +1,33 @@
+{
+  "slug": "c-sharp-programming",
+  "title": "C# Programming",
+  "author": "Wikibooks contributors",
+  "description": "A community-written introduction to C# and the .NET platform, covering language fundamentals, object-oriented programming, collections, exceptions, and the standard library. Continuously maintained on Wikibooks.",
+  "category": "csharp",
+  "subcategory": "Language Fundamentals",
+  "tags": ["csharp", "dotnet", "programming", "beginner"],
+  "language": "English",
+  "difficulty": "Beginner",
+  "publicationYear": 2013,
+  "pages": 176,
+  "format": "PDF",
+  "license": {
+    "type": "creative_commons",
+    "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "redistributionAllowed": true,
+    "note": "Wikibooks content is licensed CC BY-SA 3.0."
+  },
+  "source": {
+    "name": "Wikibooks",
+    "url": "https://en.wikibooks.org/wiki/C_Sharp_Programming"
+  },
+  "download": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/C_Sharp_Programming.pdf",
+    "size": "1.4 MB"
+  },
+  "officialUrl": "https://en.wikibooks.org/wiki/C_Sharp_Programming",
+  "featured": false,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

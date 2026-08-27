@@ -1,0 +1,33 @@
+{
+  "slug": "open-data-structures-cpp",
+  "title": "Open Data Structures (in C++)",
+  "author": "Pat Morin",
+  "description": "An open textbook covering the design and analysis of fundamental data structures — arrays, linked lists, hash tables, binary and balanced search trees, heaps, tries, and graphs — with full C++ implementations and mathematical analysis.",
+  "category": "data-structures",
+  "tags": ["data-structures", "algorithms", "cpp", "computer-science"],
+  "language": "English",
+  "difficulty": "Intermediate",
+  "publicationYear": 2013,
+  "pages": 337,
+  "format": "PDF",
+  "cover": "/covers/open-data-structures-cpp.jpg",
+  "license": {
+    "type": "creative_commons",
+    "name": "Creative Commons Attribution",
+    "url": "https://creativecommons.org/licenses/by/2.5/ca/",
+    "redistributionAllowed": true,
+    "note": "The project releases its text and code under a Creative Commons Attribution license; commercial use and remixing are permitted with attribution."
+  },
+  "source": {
+    "name": "opendatastructures.org",
+    "url": "https://opendatastructures.org/"
+  },
+  "download": {
+    "url": "https://opendatastructures.org/ods-cpp.pdf",
+    "size": "1.5 MB"
+  },
+  "officialUrl": "https://opendatastructures.org/",
+  "featured": true,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

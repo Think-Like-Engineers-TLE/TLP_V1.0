@@ -1,0 +1,32 @@
+{
+  "slug": "beginners-guide-csharp-netmf",
+  "title": "Beginners Guide to C# and the .NET Micro Framework",
+  "author": "Gus Issa",
+  "description": "An introduction to C# aimed at embedded developers using the .NET Micro Framework, moving from language basics to working with hardware ports, interrupts, and small networked devices. Published by GHI Electronics.",
+  "category": "csharp",
+  "subcategory": "Embedded",
+  "tags": ["csharp", "dotnet", "embedded", "netmf", "beginner"],
+  "language": "English",
+  "difficulty": "Beginner",
+  "publicationYear": 2012,
+  "pages": 59,
+  "format": "PDF",
+  "license": {
+    "type": "creative_commons",
+    "name": "Creative Commons Attribution-ShareAlike 3.0",
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "redistributionAllowed": true,
+    "note": "The PDF states it is licensed under Creative Commons Share Alike 3.0. The original publisher (GHI Electronics) no longer appears to host a canonical copy — a maintainer should confirm the best source or host it on TLP before publishing."
+  },
+  "source": {
+    "name": "GHI Electronics (original publisher)",
+    "url": "https://freecomputerbooks.com/Beginners-Guide%20to-C-Sharpand-the-Dot-NET-Micro-Framework.html"
+  },
+  "download": {
+    "url": "https://freecomputerbooks.com/Beginners-Guide%20to-C-Sharpand-the-Dot-NET-Micro-Framework.html"
+  },
+  "officialUrl": "https://freecomputerbooks.com/Beginners-Guide%20to-C-Sharpand-the-Dot-NET-Micro-Framework.html",
+  "featured": false,
+  "status": "draft",
+  "addedAt": "2026-08-27"
+}

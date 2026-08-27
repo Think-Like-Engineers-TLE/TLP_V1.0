@@ -1,0 +1,34 @@
+{
+  "slug": "x86-instruction-tables",
+  "title": "Instruction Tables",
+  "subtitle": "Latencies, throughputs and micro-operation breakdowns for Intel, AMD and VIA CPUs",
+  "author": "Agner Fog",
+  "description": "The fourth of Agner Fog's optimization manuals. Measured instruction latency, throughput, and micro-op data for x86 processors across many generations — an essential reference for low-level performance work.",
+  "category": "computer-architecture",
+  "subcategory": "Reference",
+  "tags": ["computer-architecture", "x86", "cpu", "reference", "performance"],
+  "language": "English",
+  "difficulty": "Advanced",
+  "publicationYear": 2023,
+  "pages": 294,
+  "format": "PDF",
+  "license": {
+    "type": "official_free_distribution",
+    "name": "Free to read; public redistribution not permitted (© Agner Fog)",
+    "url": "https://www.agner.org/optimize/",
+    "redistributionAllowed": false,
+    "note": "The manuals state that public distribution and mirroring are not allowed; a CC BY-SA 4.0 license takes effect after the author's death. TLP links to the official file only."
+  },
+  "source": {
+    "name": "agner.org/optimize",
+    "url": "https://www.agner.org/optimize/"
+  },
+  "download": {
+    "url": "https://www.agner.org/optimize/instruction_tables.pdf",
+    "size": "1.0 MB"
+  },
+  "officialUrl": "https://www.agner.org/optimize/instruction_tables.pdf",
+  "featured": false,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

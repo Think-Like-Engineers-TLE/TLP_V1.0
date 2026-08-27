@@ -1,0 +1,35 @@
+{
+  "slug": "financial-numerical-recipes-cpp",
+  "title": "Financial Numerical Recipes in C++",
+  "subtitle": "Applications in Finance",
+  "author": "Bernt Arne Ødegaard",
+  "description": "A collection of C++ implementations of common quantitative-finance calculations: present value and term structures, option pricing (Black-Scholes, binomial, finite-difference, Monte Carlo), bonds, mean-variance portfolios, and more.",
+  "category": "cpp",
+  "subcategory": "Applications",
+  "tags": ["cpp", "finance", "numerical-methods", "algorithms"],
+  "language": "English",
+  "difficulty": "Advanced",
+  "publicationYear": 2014,
+  "pages": 295,
+  "format": "PDF",
+  "cover": "/covers/financial-numerical-recipes-cpp.jpg",
+  "license": {
+    "type": "author_permission",
+    "name": "Made freely available by the author",
+    "url": "https://ba-odegaard.no/gcc_prog/recipes/",
+    "redistributionAllowed": false,
+    "note": "The author distributes the book for free from his university page but states no explicit redistribution license, so TLP links to the official copy only. A maintainer could contact the author to confirm terms."
+  },
+  "source": {
+    "name": "Bernt Arne Ødegaard (University of Stavanger)",
+    "url": "https://ba-odegaard.no/gcc_prog/recipes/recipes.pdf"
+  },
+  "download": {
+    "url": "https://ba-odegaard.no/gcc_prog/recipes/recipes.pdf",
+    "size": "1.2 MB"
+  },
+  "officialUrl": "https://ba-odegaard.no/gcc_prog/recipes/recipes.pdf",
+  "featured": false,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

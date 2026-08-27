@@ -1,0 +1,33 @@
+{
+  "slug": "microarchitecture-of-intel-amd-via-cpus",
+  "title": "The Microarchitecture of Intel, AMD and VIA CPUs",
+  "subtitle": "An optimization guide for assembly programmers and compiler makers",
+  "author": "Agner Fog",
+  "description": "The third of Agner Fog's optimization manuals. A detailed reference on how modern x86 processors work internally — pipelines, out-of-order execution, branch prediction, caches, and execution units — for every major microarchitecture generation.",
+  "category": "computer-architecture",
+  "tags": ["computer-architecture", "cpu", "x86", "performance"],
+  "language": "English",
+  "difficulty": "Advanced",
+  "publicationYear": 2023,
+  "pages": 219,
+  "format": "PDF",
+  "license": {
+    "type": "official_free_distribution",
+    "name": "Free to read; public redistribution not permitted (© Agner Fog)",
+    "url": "https://www.agner.org/optimize/",
+    "redistributionAllowed": false,
+    "note": "The manuals state that public distribution and mirroring are not allowed; a CC BY-SA 4.0 license takes effect after the author's death. TLP links to the official file only."
+  },
+  "source": {
+    "name": "agner.org/optimize",
+    "url": "https://www.agner.org/optimize/"
+  },
+  "download": {
+    "url": "https://www.agner.org/optimize/microarchitecture.pdf",
+    "size": "2.1 MB"
+  },
+  "officialUrl": "https://www.agner.org/optimize/microarchitecture.pdf",
+  "featured": false,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

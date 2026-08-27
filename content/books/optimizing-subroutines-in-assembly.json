@@ -1,0 +1,34 @@
+{
+  "slug": "optimizing-subroutines-in-assembly",
+  "title": "Optimizing Subroutines in Assembly Language",
+  "subtitle": "An optimization guide for x86 platforms",
+  "author": "Agner Fog",
+  "description": "The second of Agner Fog's optimization manuals. Covers x86 assembly optimization in depth: ABI conventions, inline assembly, instruction scheduling, vector code with SSE/AVX, and building libraries compatible across compilers and platforms.",
+  "category": "computer-architecture",
+  "subcategory": "Performance",
+  "tags": ["assembly", "x86", "performance", "optimization"],
+  "language": "English",
+  "difficulty": "Advanced",
+  "publicationYear": 2023,
+  "pages": 167,
+  "format": "PDF",
+  "license": {
+    "type": "official_free_distribution",
+    "name": "Free to read; public redistribution not permitted (© Agner Fog)",
+    "url": "https://www.agner.org/optimize/",
+    "redistributionAllowed": false,
+    "note": "The manuals state that public distribution and mirroring are not allowed; a CC BY-SA 4.0 license takes effect after the author's death. TLP links to the official file only."
+  },
+  "source": {
+    "name": "agner.org/optimize",
+    "url": "https://www.agner.org/optimize/"
+  },
+  "download": {
+    "url": "https://www.agner.org/optimize/optimizing_assembly.pdf",
+    "size": "1.6 MB"
+  },
+  "officialUrl": "https://www.agner.org/optimize/optimizing_assembly.pdf",
+  "featured": false,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

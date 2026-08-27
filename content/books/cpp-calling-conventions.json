@@ -1,0 +1,33 @@
+{
+  "slug": "cpp-calling-conventions",
+  "title": "Calling Conventions for Different C++ Compilers and Operating Systems",
+  "author": "Agner Fog",
+  "description": "The fifth of Agner Fog's optimization manuals. Documents how C++ compilers on x86 pass arguments, return values, and objects; name mangling schemes; exception handling; object file formats; and how to write code portable across compilers.",
+  "category": "cpp",
+  "subcategory": "Reference",
+  "tags": ["cpp", "abi", "compilers", "reference"],
+  "language": "English",
+  "difficulty": "Advanced",
+  "publicationYear": 2023,
+  "pages": 58,
+  "format": "PDF",
+  "license": {
+    "type": "official_free_distribution",
+    "name": "Free to read; public redistribution not permitted (© Agner Fog)",
+    "url": "https://www.agner.org/optimize/",
+    "redistributionAllowed": false,
+    "note": "The manuals state that public distribution and mirroring are not allowed; a CC BY-SA 4.0 license takes effect after the author's death. TLP links to the official file only."
+  },
+  "source": {
+    "name": "agner.org/optimize",
+    "url": "https://www.agner.org/optimize/"
+  },
+  "download": {
+    "url": "https://www.agner.org/optimize/calling_conventions.pdf",
+    "size": "1.0 MB"
+  },
+  "officialUrl": "https://www.agner.org/optimize/calling_conventions.pdf",
+  "featured": false,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

@@ -1,0 +1,30 @@
+{
+  "slug": "cpp-core-guidelines",
+  "title": "C++ Core Guidelines",
+  "author": "Bjarne Stroustrup, Herb Sutter",
+  "description": "The authoritative, continuously updated set of guidelines for writing modern C++ well — resource and memory safety, RAII, interfaces, classes, templates, concurrency, error handling, and performance — each rule with rationale and examples. Maintained by the Standard C++ Foundation.",
+  "category": "cpp",
+  "subcategory": "Best Practices",
+  "tags": ["cpp", "best-practices", "modern-cpp", "guidelines"],
+  "language": "English",
+  "difficulty": "Advanced",
+  "format": "HTML",
+  "license": {
+    "type": "open_license",
+    "name": "Standard C++ Foundation permissive license (MIT-style)",
+    "url": "https://github.com/isocpp/CppCoreGuidelines/blob/master/LICENSE",
+    "redistributionAllowed": false,
+    "note": "The licence grants copy/use/modify rights for personal or internal business use and does not clearly cover public redistribution, so TLP links to the official online version only."
+  },
+  "source": {
+    "name": "isocpp.github.io (Standard C++ Foundation)",
+    "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines"
+  },
+  "download": {
+    "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines"
+  },
+  "officialUrl": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines",
+  "featured": false,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

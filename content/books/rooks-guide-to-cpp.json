@@ -1,0 +1,34 @@
+{
+  "slug": "rooks-guide-to-cpp",
+  "title": "The Rook's Guide to C++",
+  "author": "Jeremy A. Hansen",
+  "description": "An introductory C++ textbook written by students and faculty at Norwich University. Covers variables, control structures, functions, arrays, pointers, classes, and file I/O, with exercises throughout.",
+  "category": "cpp",
+  "subcategory": "Introductory",
+  "tags": ["cpp", "programming", "beginner"],
+  "language": "English",
+  "difficulty": "Beginner",
+  "publicationYear": 2013,
+  "pages": 161,
+  "format": "PDF",
+  "cover": "/covers/rooks-guide-to-cpp.jpg",
+  "license": {
+    "type": "creative_commons",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+    "redistributionAllowed": true,
+    "note": "Stated on the copyright page of the PDF."
+  },
+  "source": {
+    "name": "rooksguide.org",
+    "url": "https://rooksguide.org/"
+  },
+  "download": {
+    "url": "https://rooksguide.org/",
+    "size": "914 KB"
+  },
+  "officialUrl": "https://rooksguide.org/",
+  "featured": true,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

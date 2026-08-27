@@ -1,0 +1,35 @@
+{
+  "slug": "csharp-yellow-book",
+  "title": "The C# Programming Yellow Book",
+  "subtitle": "Learn to program in C# from first principles",
+  "author": "Rob Miles",
+  "description": "A friendly, first-principles introduction to programming using C#, used to teach first-year computer science students at the University of Hull. Covers variables, control flow, methods, objects, and building real programs, with a healthy sense of humour.",
+  "category": "csharp",
+  "subcategory": "Language Fundamentals",
+  "tags": ["csharp", "dotnet", "programming", "beginner"],
+  "language": "English",
+  "difficulty": "Beginner",
+  "publicationYear": 2019,
+  "pages": 200,
+  "format": "PDF",
+  "cover": "/covers/csharp-yellow-book.jpg",
+  "license": {
+    "type": "author_permission",
+    "name": "Free to use, non-commercial (Rob Miles)",
+    "url": "https://www.robmiles.com/c-yellow-book",
+    "redistributionAllowed": true,
+    "note": "The author states the content is free to use but must not be sold for profit."
+  },
+  "source": {
+    "name": "robmiles.com",
+    "url": "https://www.robmiles.com/c-yellow-book"
+  },
+  "download": {
+    "url": "https://www.robmiles.com/s/CSharp-Book-2019-Refresh.pdf",
+    "size": "1.6 MB"
+  },
+  "officialUrl": "https://www.robmiles.com/c-yellow-book",
+  "featured": false,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

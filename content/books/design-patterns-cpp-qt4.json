@@ -1,0 +1,34 @@
+{
+  "slug": "design-patterns-cpp-qt4",
+  "title": "An Introduction to Design Patterns in C++ with Qt 4",
+  "author": "Alan Ezust, Paul Ezust",
+  "description": "A full C++ course built around the Qt 4 framework, teaching modern C++, object-oriented design, and the classic Gang-of-Four design patterns through practical GUI and application examples.",
+  "category": "design-patterns",
+  "subcategory": "C++ / Qt",
+  "tags": ["cpp", "design-patterns", "qt", "object-oriented"],
+  "language": "English",
+  "difficulty": "Intermediate",
+  "publicationYear": 2006,
+  "pages": 650,
+  "format": "PDF",
+  "cover": "/covers/design-patterns-cpp-qt4.jpg",
+  "license": {
+    "type": "open_license",
+    "name": "Open Publication License v1.0",
+    "url": "http://www.opencontent.org/openpub/",
+    "redistributionAllowed": true,
+    "note": "The copyright page permits distribution under the Open Publication License v1.0 or later."
+  },
+  "source": {
+    "name": "Pearson / Prentice Hall (official free PDF)",
+    "url": "https://www.informit.com/store/introduction-to-design-patterns-in-c-plus-plus-with-qt-9780132826457"
+  },
+  "download": {
+    "url": "https://ptgmedia.pearsoncmg.com/images/9780131879058/downloads/0131879057_Ezust_book.pdf",
+    "size": "9.3 MB"
+  },
+  "officialUrl": "https://www.informit.com/store/introduction-to-design-patterns-in-c-plus-plus-with-qt-9780132826457",
+  "featured": false,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

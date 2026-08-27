@@ -1,0 +1,31 @@
+{
+  "slug": "architecting-modern-web-apps-aspnet-core",
+  "title": "Architecting Modern Web Applications with ASP.NET Core and Azure",
+  "author": "Microsoft (Steve Smith)",
+  "description": "Microsoft's official guide to structuring ASP.NET Core web applications: clean architecture and dependency inversion, organising by feature, the MVC and Razor Pages models, testing strategies, and deploying to Azure.",
+  "category": "backend",
+  "subcategory": "ASP.NET Core",
+  "tags": ["dotnet", "csharp", "aspnet-core", "web", "architecture"],
+  "language": "English",
+  "difficulty": "Intermediate",
+  "publicationYear": 2023,
+  "format": "PDF",
+  "license": {
+    "type": "official_free_distribution",
+    "name": "Free .NET Architecture Guide (Microsoft)",
+    "url": "https://dotnet.microsoft.com/learn/dotnet/architecture-guides",
+    "redistributionAllowed": false,
+    "note": "Published free by Microsoft as part of the .NET Architecture Guides. TLP links to the official page."
+  },
+  "source": {
+    "name": "Microsoft Learn — .NET Architecture Guides",
+    "url": "https://learn.microsoft.com/dotnet/architecture/modern-web-apps-azure/"
+  },
+  "download": {
+    "url": "https://learn.microsoft.com/dotnet/architecture/modern-web-apps-azure/"
+  },
+  "officialUrl": "https://learn.microsoft.com/dotnet/architecture/modern-web-apps-azure/",
+  "featured": false,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

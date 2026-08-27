@@ -1,0 +1,31 @@
+{
+  "slug": "net-microservices-architecture",
+  "title": ".NET Microservices: Architecture for Containerized .NET Applications",
+  "author": "Microsoft (Cesar de la Torre, Bill Wagner, Mike Rousos)",
+  "description": "Microsoft's official guide to designing and building microservice-based, containerized applications with .NET and Docker. Covers architecture patterns, per-service data, API gateways, resilience, event-driven communication, and deployment, alongside the reference application.",
+  "category": "software-architecture",
+  "subcategory": "Microservices",
+  "tags": ["dotnet", "csharp", "microservices", "docker", "architecture"],
+  "language": "English",
+  "difficulty": "Intermediate",
+  "publicationYear": 2023,
+  "format": "PDF",
+  "license": {
+    "type": "official_free_distribution",
+    "name": "Free .NET Architecture Guide (Microsoft)",
+    "url": "https://dotnet.microsoft.com/learn/dotnet/architecture-guides",
+    "redistributionAllowed": false,
+    "note": "Published free by Microsoft as part of the .NET Architecture Guides. TLP links to the official page; the PDF and online versions are hosted by Microsoft."
+  },
+  "source": {
+    "name": "Microsoft Learn — .NET Architecture Guides",
+    "url": "https://learn.microsoft.com/dotnet/architecture/microservices/"
+  },
+  "download": {
+    "url": "https://learn.microsoft.com/dotnet/architecture/microservices/"
+  },
+  "officialUrl": "https://learn.microsoft.com/dotnet/architecture/microservices/",
+  "featured": false,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

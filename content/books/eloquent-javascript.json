@@ -11,6 +11,7 @@
   "difficulty": "Intermediate",
   "publicationYear": 2024,
   "format": "PDF",
+  "cover": "/covers/eloquent-javascript.jpg",
   "license": {
     "type": "creative_commons",
     "name": "Creative Commons Attribution-NonCommercial 3.0 Unported",

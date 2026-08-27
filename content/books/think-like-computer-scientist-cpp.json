@@ -1,0 +1,33 @@
+{
+  "slug": "think-like-computer-scientist-cpp",
+  "title": "How to Think Like a Computer Scientist: C++ Version",
+  "author": "Allen B. Downey",
+  "description": "A gentle introduction to programming and computer-science thinking using C++. Builds from variables, expressions, and functions up to recursion, classes, vectors, and larger programs, emphasising problem decomposition over syntax.",
+  "category": "cpp",
+  "subcategory": "Introductory",
+  "tags": ["cpp", "programming", "computer-science", "beginner"],
+  "language": "English",
+  "difficulty": "Beginner",
+  "publicationYear": 2012,
+  "pages": 192,
+  "format": "PDF",
+  "cover": "/covers/think-like-computer-scientist-cpp.jpg",
+  "license": {
+    "type": "creative_commons",
+    "name": "Creative Commons Attribution-NonCommercial 3.0 Unported",
+    "url": "https://creativecommons.org/licenses/by-nc/3.0/",
+    "redistributionAllowed": true,
+    "note": "The PDF grants permission to copy, distribute, and modify under CC BY-NC 3.0."
+  },
+  "source": {
+    "name": "Green Tea Press",
+    "url": "https://greenteapress.com/wp/think-c/"
+  },
+  "download": {
+    "url": "https://greenteapress.com/wp/think-c/"
+  },
+  "officialUrl": "https://greenteapress.com/wp/think-c/",
+  "featured": false,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}
