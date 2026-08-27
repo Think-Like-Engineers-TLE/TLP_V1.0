@@ -4,6 +4,9 @@ import { createMetadata } from "@/lib/site";
 import { CATEGORY_SLUGS, getCategory } from "@/lib/categories";
 import { getBooksByCategory } from "@/lib/books";
 import { PageHeader } from "@/components/page-header";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { BookGrid } from "@/components/book-grid";
+import { EmptyState } from "@/components/empty-state";
 
 export const dynamicParams = false;
 
@@ -17,7 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   return createMetadata({
     title: cat ? `${cat.label} Books` : "Books",
     path: `/books/${category}`,
-    description: cat ? `Free ${cat.label} books and resources.` : undefined,
+    description: cat ? `Free ${cat.label} books and learning resources.` : undefined,
   });
 }
 
@@ -30,6 +33,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
 
   return (
     <div>
+      <Breadcrumbs items={[{ label: "Books", href: "/books" }, { label: cat.label }]} />
       <PageHeader
         eyebrow={cat.group}
         title={cat.label}
@@ -37,30 +41,18 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
       />
 
       {books.length === 0 ? (
-        <div className="border-line bg-surface/50 text-fg-muted rounded-lg border border-dashed p-6 text-sm">
-          No resources in this category yet.{" "}
+        <EmptyState title="No resources in this category yet">
           <Link href="/contribute" className="text-primary hover:underline">
             Contribute one
+          </Link>{" "}
+          or{" "}
+          <Link href="/books" className="text-primary hover:underline">
+            browse the full library
           </Link>
           .
-        </div>
+        </EmptyState>
       ) : (
-        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {books.map((book) => (
-            <li key={book.slug}>
-              <Link
-                href={`/books/${book.category}/${book.slug}`}
-                className="border-line bg-surface hover:border-fg-subtle flex h-full flex-col rounded-lg border p-4 transition-colors"
-              >
-                <span className="text-fg font-medium">{book.title}</span>
-                <span className="text-fg-muted mt-1 text-sm">{book.authors.join(", ")}</span>
-                <span className="text-fg-subtle mt-3 font-mono text-xs">
-                  {cat.label} • {book.difficulty} • {book.format}
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <BookGrid books={books} />
       )}
     </div>
   );

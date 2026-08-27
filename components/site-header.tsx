@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { siteConfig } from "@/lib/site";
@@ -10,8 +10,26 @@ import { ThemeToggle } from "./theme-toggle";
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const closeRef = useRef<HTMLButtonElement>(null);
 
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
+
+  // Close on route change.
+  useEffect(() => setOpen(false), [pathname]);
+
+  // Escape to close + scroll lock while the drawer is open.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    document.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeRef.current?.focus();
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [open]);
 
   return (
     <header className="border-line bg-bg/80 sticky top-0 z-40 border-b backdrop-blur">
@@ -43,8 +61,7 @@ export function SiteHeader() {
             rel="noreferrer"
             className="border-line bg-surface text-fg-muted hover:text-fg hidden h-9 items-center gap-1.5 rounded-md border px-3 text-sm transition-colors sm:inline-flex"
           >
-            GitHub
-            <span aria-hidden>↗</span>
+            GitHub <span aria-hidden>↗</span>
           </a>
           <ThemeToggle />
           <button
@@ -52,23 +69,53 @@ export function SiteHeader() {
             className="border-line bg-surface text-fg-muted inline-flex h-9 w-9 items-center justify-center rounded-md border md:hidden"
             aria-expanded={open}
             aria-controls="mobile-nav"
-            aria-label="Toggle navigation menu"
-            onClick={() => setOpen((v) => !v)}
+            aria-label="Open navigation menu"
+            onClick={() => setOpen(true)}
           >
-            {open ? "✕" : "☰"}
+            ☰
           </button>
         </div>
       </div>
 
-      {open && (
-        <nav id="mobile-nav" aria-label="Mobile" className="border-line bg-bg border-t md:hidden">
-          <ul className="mx-auto flex w-full max-w-6xl flex-col px-4 py-2 sm:px-6">
+      {/* Mobile drawer */}
+      <div
+        className={`fixed inset-0 z-50 md:hidden ${open ? "" : "pointer-events-none"}`}
+        aria-hidden={!open}
+      >
+        <div
+          className={`absolute inset-0 bg-black/50 transition-opacity ${
+            open ? "opacity-100" : "opacity-0"
+          }`}
+          onClick={() => setOpen(false)}
+        />
+        <nav
+          id="mobile-nav"
+          aria-label="Mobile"
+          className={`border-line bg-bg absolute top-0 right-0 flex h-full w-72 max-w-[80vw] flex-col border-l shadow-xl transition-transform ${
+            open ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <div className="border-line flex h-14 items-center justify-between border-b px-4">
+            <Logo />
+            <button
+              ref={closeRef}
+              type="button"
+              onClick={() => setOpen(false)}
+              aria-label="Close navigation menu"
+              className="border-line bg-surface text-fg-muted inline-flex h-9 w-9 items-center justify-center rounded-md border"
+            >
+              ✕
+            </button>
+          </div>
+          <ul className="flex flex-col p-2">
             {siteConfig.nav.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  onClick={() => setOpen(false)}
-                  className="text-fg-muted hover:bg-surface hover:text-fg block rounded-md px-3 py-2.5 text-sm"
+                  aria-current={isActive(item.href) ? "page" : undefined}
+                  className={`hover:bg-surface hover:text-fg block rounded-md px-3 py-2.5 text-sm ${
+                    isActive(item.href) ? "text-fg" : "text-fg-muted"
+                  }`}
                 >
                   {item.label}
                 </Link>
@@ -86,7 +133,7 @@ export function SiteHeader() {
             </li>
           </ul>
         </nav>
-      )}
+      </div>
     </header>
   );
 }

@@ -78,3 +78,20 @@ export async function getRecentBooks(limit = 8): Promise<Book[]> {
   const books = await getPublishedBooks();
   return books.slice(0, limit);
 }
+
+/** Books sharing a category or tag with the given book. */
+export async function getRelatedBooks(book: Book, limit = 3): Promise<Book[]> {
+  const books = await getPublishedBooks();
+  const tags = new Set(book.tags);
+  return books
+    .filter((b) => b.slug !== book.slug)
+    .map((b) => {
+      let score = b.category === book.category ? 2 : 0;
+      for (const t of b.tags) if (tags.has(t)) score += 1;
+      return { b, score };
+    })
+    .filter((x) => x.score > 0)
+    .sort((a, z) => z.score - a.score)
+    .slice(0, limit)
+    .map((x) => x.b);
+}

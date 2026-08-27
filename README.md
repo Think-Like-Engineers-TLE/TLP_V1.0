@@ -20,9 +20,9 @@ experience, and licensing transparency** around them.
 
 ## Status
 
-**Phase 0 — Foundation.** Project setup, design system, content pipeline, CI/CD
-and deployment are in place. The library UI, search, and content come next
-(see the [roadmap](#roadmap)).
+**Phase 1 — UI.** Foundation plus the component library and full page layouts
+for the homepage, book library, category / topic / author pages, and book detail
+pages. Search, filters and sorting are next in Phase 3 (see the [roadmap](#roadmap)).
 
 ## Tech stack
 
@@ -78,9 +78,9 @@ Every resource must have a clear license basis for being listed.
 ## Roadmap
 
 - **Phase 0 — Foundation** ✅ setup, design system, CI/CD, deployment
-- **Phase 1 — UI** homepage, book cards, book pages, categories, dark/light, responsive
+- **Phase 1 — UI** ✅ component library, homepage, book cards & pages, category / topic / author pages, drawer nav
 - **Phase 2 — Content** book metadata, covers, licenses, sources
-- **Phase 3 — Discovery** search, filters, sorting, author & topic pages
+- **Phase 3 — Discovery** search, filters, sorting
 - **Phase 4 — Open Source** contribution system, validation, templates
 - **Phase 5 — Launch** SEO, performance, a11y, security & legal review
 

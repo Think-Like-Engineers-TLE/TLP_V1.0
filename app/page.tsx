@@ -1,27 +1,22 @@
 import Link from "next/link";
 import { siteConfig, createMetadata } from "@/lib/site";
-import { CATEGORIES } from "@/lib/categories";
+import { categoriesByGroup } from "@/lib/categories";
+import { getFeaturedBooks, getRecentBooks } from "@/lib/books";
+import { getAllTopics } from "@/lib/topics";
+import { BookGrid } from "@/components/book-grid";
+import { SectionHeading } from "@/components/section-heading";
+import { Badge, difficultyTone } from "@/components/ui/badge";
 
-export const metadata = createMetadata({
-  path: "/",
-  description: siteConfig.description,
-});
+export const metadata = createMetadata({ path: "/" });
 
-const POPULAR = [
-  "python",
-  "javascript",
-  "web-development",
-  "algorithms",
-  "machine-learning",
-  "linux",
-  "databases",
-  "devops",
-];
-
-export default function HomePage() {
-  const popular = POPULAR.map((slug) => CATEGORIES.find((c) => c.slug === slug)).filter(
-    (c): c is NonNullable<typeof c> => Boolean(c),
-  );
+export default async function HomePage() {
+  const [featured, recent, topics] = await Promise.all([
+    getFeaturedBooks(),
+    getRecentBooks(6),
+    getAllTopics(),
+  ]);
+  const groups = [...categoriesByGroup().entries()];
+  const popularTopics = topics.slice(0, 12);
 
   return (
     <div className="flex flex-col gap-16">
@@ -72,37 +67,78 @@ export default function HomePage() {
       </section>
 
       {/* Popular topics */}
-      <section>
-        <h2 className="text-fg-subtle mb-4 text-sm font-semibold tracking-widest uppercase">
-          Popular Topics
-        </h2>
-        <ul className="flex flex-wrap gap-2">
-          {popular.map((c) => (
-            <li key={c.slug}>
-              <Link
-                href={`/books/${c.slug}`}
-                className="border-line bg-surface text-fg-muted hover:border-fg-subtle hover:text-fg inline-flex items-center rounded-full border px-3 py-1.5 text-sm transition-colors"
-              >
-                {c.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
+      {popularTopics.length > 0 && (
+        <section>
+          <SectionHeading href="/topics">Popular Topics</SectionHeading>
+          <ul className="flex flex-wrap gap-2">
+            {popularTopics.map((t) => (
+              <li key={t.slug}>
+                <Link
+                  href={`/topics/${t.slug}`}
+                  className="border-line bg-surface text-fg-muted hover:border-fg-subtle hover:text-fg inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm transition-colors"
+                >
+                  {t.label}
+                  <span className="text-fg-subtle font-mono text-xs">{t.count}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
-      {/* Placeholder sections for Phase 1/2 */}
-      <section className="grid gap-4 sm:grid-cols-3">
-        {["Featured Books", "Recently Added", "Explore the Library"].map((label) => (
-          <div
-            key={label}
-            className="border-line bg-surface/50 rounded-lg border border-dashed p-6"
-          >
-            <h2 className="text-fg text-sm font-semibold">{label}</h2>
-            <p className="text-fg-subtle mt-2 text-xs">
-              Populated once book content and the library UI land (Phase 1–2).
-            </p>
-          </div>
-        ))}
+      {/* Featured */}
+      {featured.length > 0 && (
+        <section>
+          <SectionHeading href="/books">Featured Books</SectionHeading>
+          <BookGrid books={featured} />
+        </section>
+      )}
+
+      {/* Recently added */}
+      {recent.length > 0 && (
+        <section>
+          <SectionHeading>Recently Added</SectionHeading>
+          <ul className="divide-line border-line divide-y rounded-lg border">
+            {recent.map((book) => (
+              <li key={book.slug}>
+                <Link
+                  href={`/books/${book.category}/${book.slug}`}
+                  className="hover:bg-surface flex items-center gap-3 px-4 py-3"
+                >
+                  <span aria-hidden className="text-fg-subtle font-mono">
+                    →
+                  </span>
+                  <span className="text-fg min-w-0 flex-1 truncate">{book.title}</span>
+                  <span className="text-fg-muted hidden truncate text-sm sm:block">
+                    {book.authors.join(", ")}
+                  </span>
+                  <Badge tone={difficultyTone(book.difficulty)}>{book.difficulty}</Badge>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {/* Explore the library */}
+      <section>
+        <SectionHeading href="/books">Explore the Library</SectionHeading>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {groups.map(([group, categories]) => (
+            <div key={group} className="border-line bg-surface rounded-lg border p-4">
+              <h3 className="text-fg mb-2 text-sm font-semibold">{group}</h3>
+              <ul className="flex flex-wrap gap-x-3 gap-y-1 text-sm">
+                {categories.map((c) => (
+                  <li key={c.slug}>
+                    <Link href={`/books/${c.slug}`} className="text-fg-muted hover:text-primary">
+                      {c.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   );

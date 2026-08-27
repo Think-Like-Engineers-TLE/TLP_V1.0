@@ -60,7 +60,19 @@ Palette is anchored on GitHub Primer values (canvas `#0d1117`, accent blue).
 - `prefers-reduced-motion` respected globally.
 - Target: **WCAG 2.2 AA**. Full audit is Phase 5.
 
-## Not yet designed (Phase 1)
+## Components (Phase 1)
 
-BookCard, BookGrid, filter/sort controls, search dialog (`/` and `Ctrl+K`),
-topic & author cards, cover treatment, skeletons.
+| Component | File | Notes |
+|---|---|---|
+| `Badge` | `components/ui/badge.tsx` | tones: neutral / primary / green / purple; `difficultyTone()` helper |
+| `BookCover` | `components/book-cover.tsx` | real image (`object-cover`) or a deterministic generated placeholder (hue from slug) |
+| `BookCard` | `components/book-card.tsx` | §12 — cover + title + authors + clamped description + badges; whole card links |
+| `BookGrid` | `components/book-grid.tsx` | responsive `md:grid-cols-2` |
+| `Breadcrumbs` | `components/breadcrumbs.tsx` | `aria-label="Breadcrumb"`, last item `aria-current` |
+| `SectionHeading` | `components/section-heading.tsx` | uppercase label + optional "view all" link |
+| `EmptyState` | `components/empty-state.tsx` | dashed card |
+| Nav drawer | `components/site-header.tsx` | slide-over on mobile: backdrop, Esc, scroll-lock, focuses close button |
+
+## Not yet designed (Phase 3)
+
+Filter/sort controls, search dialog (`/` and `Ctrl+K`), skeletons/loading states.

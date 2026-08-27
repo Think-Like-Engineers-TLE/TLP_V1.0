@@ -2,8 +2,14 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { createMetadata } from "@/lib/site";
 import { getCategory } from "@/lib/categories";
-import { getBook, getPublishedBooks } from "@/lib/books";
-import { PageHeader } from "@/components/page-header";
+import { getBook, getPublishedBooks, getRelatedBooks } from "@/lib/books";
+import { LICENSE_TYPE_LABEL } from "@/lib/labels";
+import { slugify } from "@/lib/slug";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { BookCover } from "@/components/book-cover";
+import { BookCard } from "@/components/book-card";
+import { Badge, difficultyTone } from "@/components/ui/badge";
+import { SectionHeading } from "@/components/section-heading";
 
 export const dynamicParams = false;
 
@@ -26,14 +32,6 @@ export async function generateMetadata({
   });
 }
 
-const LICENSE_LABEL: Record<string, string> = {
-  public_domain: "Public Domain",
-  creative_commons: "Creative Commons",
-  open_license: "Open License",
-  author_permission: "Author Permission",
-  official_free_distribution: "Official Free Distribution",
-};
-
 export default async function BookDetailPage({
   params,
 }: {
@@ -44,9 +42,9 @@ export default async function BookDetailPage({
   if (!book || book.status !== "published" || book.category !== category) notFound();
 
   const cat = getCategory(book.category);
+  const related = await getRelatedBooks(book);
 
   const info: [string, string | undefined][] = [
-    ["Author", book.authors.join(", ")],
     ["Language", book.language],
     ["Category", cat?.label],
     ["Level", book.difficulty],
@@ -59,36 +57,85 @@ export default async function BookDetailPage({
 
   return (
     <article>
-      <PageHeader eyebrow={cat?.label} title={book.title} lead={book.subtitle} />
+      <Breadcrumbs
+        items={[
+          { label: "Books", href: "/books" },
+          { label: cat?.label ?? book.category, href: `/books/${book.category}` },
+          { label: book.title },
+        ]}
+      />
 
-      <div className="mb-8 flex flex-wrap gap-3">
-        <a
-          href={book.download.url}
-          target="_blank"
-          rel="noreferrer"
-          className="bg-primary text-primary-fg hover:bg-primary-hover inline-flex h-11 items-center rounded-md px-5 font-medium"
-        >
-          Download {book.format}
-          {book.download.size ? ` • ${book.download.size}` : ""}
-        </a>
-        <a
-          href={book.officialUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="border-line bg-surface text-fg hover:border-fg-subtle inline-flex h-11 items-center rounded-md border px-5 font-medium"
-        >
-          Official Source ↗
-        </a>
+      {/* Header */}
+      <div className="grid gap-8 md:grid-cols-[200px_1fr]">
+        <BookCover book={book} className="w-40 md:w-full" />
+
+        <div>
+          <h1 className="text-fg text-3xl font-semibold tracking-tight">{book.title}</h1>
+          {book.subtitle && <p className="text-fg-muted mt-1 text-lg">{book.subtitle}</p>}
+
+          <p className="text-fg-muted mt-2">
+            {book.authors.map((name, i) => (
+              <span key={name}>
+                {i > 0 && ", "}
+                <Link href={`/authors/${slugify(name)}`} className="hover:text-fg hover:underline">
+                  {name}
+                </Link>
+              </span>
+            ))}
+          </p>
+
+          <div className="mt-4 flex flex-wrap gap-1.5">
+            {cat && (
+              <Link href={`/books/${cat.slug}`}>
+                <Badge tone="neutral">{cat.label}</Badge>
+              </Link>
+            )}
+            <Badge tone={difficultyTone(book.difficulty)}>{book.difficulty}</Badge>
+            <Badge tone="neutral">{book.language}</Badge>
+            {book.publicationYear && <Badge tone="neutral">{book.publicationYear}</Badge>}
+          </div>
+
+          {/* CTAs + transparency (§59, §60) */}
+          <div className="border-line bg-surface mt-6 rounded-lg border p-4">
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={book.download.url}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-primary text-primary-fg hover:bg-primary-hover inline-flex h-11 items-center rounded-md px-5 font-medium"
+              >
+                Download {book.format}
+                {book.download.size ? ` · ${book.download.size}` : ""}
+              </a>
+              <a
+                href={book.officialUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="border-line bg-bg text-fg hover:border-fg-subtle inline-flex h-11 items-center rounded-md border px-5 font-medium"
+              >
+                Official Source ↗
+              </a>
+            </div>
+            <dl className="text-fg-subtle mt-3 grid grid-cols-[5rem_1fr] gap-x-3 gap-y-1 text-xs">
+              <dt>License</dt>
+              <dd className="text-fg-muted">{book.license.name}</dd>
+              <dt>Source</dt>
+              <dd className="text-fg-muted">{book.source.name}</dd>
+            </dl>
+          </div>
+        </div>
       </div>
 
-      <section className="mb-8">
+      {/* Description */}
+      <section className="mt-10 max-w-2xl">
         <h2 className="text-fg mb-2 text-lg font-semibold">Description</h2>
-        <p className="text-fg-muted max-w-2xl">{book.description}</p>
+        <p className="text-fg-muted">{book.description}</p>
       </section>
 
-      <section className="mb-8">
+      {/* Book information */}
+      <section className="mt-8">
         <h2 className="text-fg mb-3 text-lg font-semibold">Book information</h2>
-        <dl className="grid max-w-2xl grid-cols-[8rem_1fr] gap-x-4 gap-y-2 text-sm">
+        <dl className="border-line grid max-w-2xl grid-cols-[8rem_1fr] gap-x-4 gap-y-2 border-t pt-3 text-sm">
           {info
             .filter(([, v]) => Boolean(v))
             .map(([k, v]) => (
@@ -100,26 +147,30 @@ export default async function BookDetailPage({
         </dl>
       </section>
 
+      {/* Learning topics */}
       {book.tags.length > 0 && (
-        <section className="mb-8">
+        <section className="mt-8">
           <h2 className="text-fg mb-3 text-lg font-semibold">Topics</h2>
           <ul className="flex flex-wrap gap-2">
             {book.tags.map((t) => (
-              <li
-                key={t}
-                className="border-line bg-surface text-fg-muted rounded-full border px-3 py-1 font-mono text-xs"
-              >
-                {t}
+              <li key={t}>
+                <Link
+                  href={`/topics/${slugify(t)}`}
+                  className="border-line bg-surface text-fg-muted hover:border-fg-subtle hover:text-fg inline-flex rounded-full border px-3 py-1 font-mono text-xs"
+                >
+                  {t}
+                </Link>
               </li>
             ))}
           </ul>
         </section>
       )}
 
-      <section className="border-line bg-surface/50 rounded-lg border p-5">
+      {/* License (§13, §54) */}
+      <section className="border-line bg-surface/50 mt-8 rounded-lg border p-5">
         <h2 className="text-fg mb-2 text-lg font-semibold">License</h2>
         <p className="text-fg text-sm">
-          {LICENSE_LABEL[book.license.type]} — {book.license.name}
+          {LICENSE_TYPE_LABEL[book.license.type]} — {book.license.name}
           {book.license.url && (
             <>
               {" "}
@@ -141,6 +192,20 @@ export default async function BookDetailPage({
         </p>
         {book.license.note && <p className="text-fg-muted mt-2 text-sm">{book.license.note}</p>}
       </section>
+
+      {/* Related */}
+      {related.length > 0 && (
+        <section className="mt-12">
+          <SectionHeading href={`/books/${book.category}`}>Related books</SectionHeading>
+          <ul className="grid gap-4 md:grid-cols-2">
+            {related.map((b) => (
+              <li key={b.slug} className="flex">
+                <BookCard book={b} />
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <p className="mt-10 text-sm">
         <Link href={`/books/${book.category}`} className="text-fg-muted hover:text-fg">
