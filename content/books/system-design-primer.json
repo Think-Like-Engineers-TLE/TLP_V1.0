@@ -1,0 +1,30 @@
+{
+  "slug": "system-design-primer",
+  "title": "The System Design Primer",
+  "author": "Donne Martin",
+  "description": "A community-maintained study guide for large-scale system design and the system design interview: scalability fundamentals, caching, load balancing, databases, messaging, and worked example architectures, with flashcards and further reading.",
+  "category": "system-design",
+  "tags": ["system-design", "scalability", "architecture", "interview-prep"],
+  "language": "English",
+  "difficulty": "Intermediate",
+  "publicationYear": 2024,
+  "format": "HTML",
+  "license": {
+    "type": "creative_commons",
+    "name": "Creative Commons Attribution 4.0 International",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "redistributionAllowed": true,
+    "note": "Stated in the repository's LICENSE.txt."
+  },
+  "source": {
+    "name": "GitHub (official repository)",
+    "url": "https://github.com/donnemartin/system-design-primer"
+  },
+  "download": {
+    "url": "https://github.com/donnemartin/system-design-primer"
+  },
+  "officialUrl": "https://github.com/donnemartin/system-design-primer",
+  "featured": true,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

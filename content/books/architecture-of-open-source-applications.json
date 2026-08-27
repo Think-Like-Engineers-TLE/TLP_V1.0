@@ -1,0 +1,32 @@
+{
+  "slug": "architecture-of-open-source-applications",
+  "title": "The Architecture of Open Source Applications",
+  "author": "Amy Brown, Greg Wilson (eds.)",
+  "description": "Creators of two dozen significant open-source projects describe their software's architecture: why it's built the way it is, what they'd do differently, and what they learned. A rare look at real system design decisions.",
+  "category": "software-architecture",
+  "tags": ["software-architecture", "open-source", "system-design"],
+  "language": "English",
+  "difficulty": "Advanced",
+  "publicationYear": 2012,
+  "pages": 400,
+  "format": "PDF",
+  "license": {
+    "type": "creative_commons",
+    "name": "Creative Commons Attribution 3.0 Unported",
+    "url": "https://creativecommons.org/licenses/by/3.0/",
+    "redistributionAllowed": true,
+    "note": "All royalties from paid editions are donated to Amnesty International; the text itself is free under CC BY."
+  },
+  "source": {
+    "name": "aosabook.org (official)",
+    "url": "https://aosabook.org/en/"
+  },
+  "download": {
+    "url": "https://archive.org/download/aosa_v2/aosa_v2.pdf",
+    "size": "5.4 MB"
+  },
+  "officialUrl": "https://aosabook.org/en/",
+  "featured": false,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}

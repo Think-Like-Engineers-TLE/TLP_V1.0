@@ -1,0 +1,30 @@
+{
+  "slug": "kubernetes-the-hard-way",
+  "title": "Kubernetes the Hard Way",
+  "author": "Kelsey Hightower",
+  "description": "A hands-on tutorial that bootstraps a Kubernetes cluster from scratch, step by step, without a scripted installer — certificates, etcd, the control plane, worker nodes, networking, and smoke tests — to build a real understanding of how Kubernetes works.",
+  "category": "kubernetes",
+  "tags": ["kubernetes", "devops", "containers", "cloud"],
+  "language": "English",
+  "difficulty": "Advanced",
+  "publicationYear": 2024,
+  "format": "HTML",
+  "license": {
+    "type": "open_license",
+    "name": "Apache License 2.0",
+    "url": "https://github.com/kelseyhightower/kubernetes-the-hard-way/blob/master/LICENSE",
+    "redistributionAllowed": true,
+    "note": "Stated in the repository's LICENSE file."
+  },
+  "source": {
+    "name": "GitHub (official repository)",
+    "url": "https://github.com/kelseyhightower/kubernetes-the-hard-way"
+  },
+  "download": {
+    "url": "https://github.com/kelseyhightower/kubernetes-the-hard-way"
+  },
+  "officialUrl": "https://github.com/kelseyhightower/kubernetes-the-hard-way",
+  "featured": false,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}
