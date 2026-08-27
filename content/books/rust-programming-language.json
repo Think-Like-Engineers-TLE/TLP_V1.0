@@ -1,0 +1,30 @@
+{
+  "slug": "rust-programming-language",
+  "title": "The Rust Programming Language",
+  "author": "Steve Klabnik, Carol Nichols",
+  "description": "The official book on Rust: ownership and borrowing, structs and enums, error handling, generics and traits, concurrency, and building real projects — the standard starting point for learning the language.",
+  "category": "rust",
+  "tags": ["rust", "systems-programming", "beginner"],
+  "language": "English",
+  "difficulty": "Beginner",
+  "publicationYear": 2024,
+  "format": "HTML",
+  "license": {
+    "type": "open_license",
+    "name": "Dual-licensed MIT / Apache License 2.0",
+    "url": "https://github.com/rust-lang/book/blob/main/LICENSE-MIT",
+    "redistributionAllowed": true,
+    "note": "Same license as the Rust project itself; the book's source is on GitHub at rust-lang/book."
+  },
+  "source": {
+    "name": "The Rust Programming Language (official docs)",
+    "url": "https://doc.rust-lang.org/book/"
+  },
+  "download": {
+    "url": "https://doc.rust-lang.org/book/"
+  },
+  "officialUrl": "https://doc.rust-lang.org/book/",
+  "featured": true,
+  "status": "published",
+  "addedAt": "2026-08-27"
+}
