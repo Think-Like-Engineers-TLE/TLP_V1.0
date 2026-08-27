@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: 💬 Questions & ideas
-    url: https://github.com/think-like-programmer/think-like-programmer/discussions
+    url: https://github.com/Think-Like-Engineers-TLE/TLP_V1.0/discussions
     about: Ask questions or discuss ideas before opening an issue.
   - name: ⚖️ Copyright / license concern
-    url: https://github.com/think-like-programmer/think-like-programmer/issues/new?labels=copyright&template=bug-report.yml
+    url: https://github.com/Think-Like-Engineers-TLE/TLP_V1.0/issues/new?labels=copyright&template=bug-report.yml
     about: Report a resource you believe is listed incorrectly.

@@ -7,7 +7,7 @@
   "homepage": "https://thinklikeprogrammer.dev",
   "repository": {
     "type": "git",
-    "url": "https://github.com/think-like-programmer/think-like-programmer.git"
+    "url": "https://github.com/Think-Like-Engineers-TLE/TLP_V1.0.git"
   },
   "engines": {
     "node": ">=20.9.0"

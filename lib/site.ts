@@ -8,8 +8,7 @@ export const siteConfig = {
   description:
     "A free, open-source library of legally free programming books and learning resources. Learn. Explore. Build.",
   tagline: "Learn. Explore. Build.",
-  // TODO: point this at the real repository once it exists.
-  github: "https://github.com/think-like-programmer/think-like-programmer",
+  github: "https://github.com/Think-Like-Engineers-TLE/TLP_V1.0",
   nav: [
     { label: "Books", href: "/books" },
     { label: "Topics", href: "/topics" },
