@@ -47,12 +47,6 @@ export default async function HomePage() {
           >
             View on GitHub ↗
           </a>
-          <Link
-            href="/contribute"
-            className="text-fg-muted hover:text-fg inline-flex h-11 items-center px-2 font-medium underline-offset-4 hover:underline"
-          >
-            Contribute a Resource
-          </Link>
         </div>
 
         <div className="mx-auto mt-8 max-w-xl">
