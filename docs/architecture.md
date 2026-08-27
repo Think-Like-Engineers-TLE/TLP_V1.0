@@ -69,17 +69,34 @@ Tailwind utilities via `@theme inline`.
 
 ## Deployment (§32)
 
-Cloudflare Pages. Two options:
+Cloudflare Pages. **Live** (first deployed 2026-08-27, manually via `wrangler pages deploy`):
 
-1. **GitHub Actions** (`.github/workflows/deploy.yml`) — builds and runs
-   `wrangler pages deploy out`. Needs `CLOUDFLARE_API_TOKEN` and
-   `CLOUDFLARE_ACCOUNT_ID` secrets, and a Pages project named
-   `think-like-programmer`.
-2. **Pages Git integration** — connect the repo in the Cloudflare dashboard
-   (build: `npm run build`, output: `out`) and delete the deploy workflow.
+- **URL:** <https://think-like-programmer.pages.dev>
+- **Cloudflare account:** "Aeroer Mak" (`aeroermark@gmail.com`), account id
+  `b26fb248d2c7538a86f475426af32828`. Wrangler on this machine is logged into
+  that account (OAuth; run `npx wrangler whoami` to confirm).
+- **Project:** `think-like-programmer`, production branch `main`.
+
+Redeploy manually any time with:
+
+```bash
+npm run build
+npx wrangler pages deploy out --project-name=think-like-programmer --branch=main
+```
+
+To automate it, finish wiring `.github/workflows/deploy.yml`:
+
+1. Create a Cloudflare **API token** (dashboard → My Profile → API Tokens →
+   "Edit Cloudflare Workers" template, or scope it to Pages) — a token, not the
+   OAuth login used above; Actions needs its own credential.
+2. Add it as the `CLOUDFLARE_API_TOKEN` repo secret, and
+   `CLOUDFLARE_ACCOUNT_ID` = `b26fb248d2c7538a86f475426af32828`.
+3. Pushes to `main` will then auto-deploy. (Or connect the repo directly via
+   Cloudflare Pages' Git integration instead, and delete the workflow.)
 
 `NEXT_PUBLIC_SITE_URL` must be set to the production URL (canonical links,
-sitemap, OG tags).
+sitemap, OG tags) — currently `https://think-like-programmer.pages.dev` in both
+the manual build and `deploy.yml`; update it once a custom domain is attached.
 
 ## Open questions (carry into later phases)
 

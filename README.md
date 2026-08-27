@@ -18,11 +18,14 @@ _GitHub meets a modern technical library_.
 The real product is not the PDFs — it's the **organization, metadata, discovery
 experience, and licensing transparency** around them.
 
+**Live:** <https://think-like-programmer.pages.dev>
+
 ## Status
 
-**Phase 3 — Discovery.** Foundation, full UI, ~19 book entries, and now
-`⌘K` / `/` global search plus URL-driven filters and sorting on the library.
-Remaining before launch: more content, and Phase 5 polish (perf, a11y, deploy).
+**Phase 3 — Discovery, deployed.** Foundation, full UI, 31 book entries, `⌘K` / `/`
+global search, URL-driven filters and sorting — live on Cloudflare Pages.
+Remaining before a real launch: more content, a custom domain, and Phase 5
+polish (perf, a11y, security/legal review, CI auto-deploy).
 
 ## Tech stack
 
@@ -83,7 +86,7 @@ Every resource must have a clear license basis for being listed.
 - **Phase 2 — Content** 🚧 19 book entries in; covers + more books ongoing
 - **Phase 3 — Discovery** ✅ `⌘K` / `/` global search, URL-driven filters & sorting on the library
 - **Phase 4 — Open Source** contribution system, validation, templates
-- **Phase 5 — Launch** SEO, performance, a11y, security & legal review
+- **Phase 5 — Launch** 🚧 deployed to Cloudflare Pages (manual); still need CI auto-deploy, custom domain, perf/a11y/security/legal review
 
 ## License
 

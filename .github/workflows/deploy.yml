@@ -9,10 +9,10 @@ on:
 #
 # Required repository secrets:
 #   CLOUDFLARE_API_TOKEN    - token with "Cloudflare Pages: Edit" permission
-#   CLOUDFLARE_ACCOUNT_ID   - your Cloudflare account id
+#   CLOUDFLARE_ACCOUNT_ID   - the "Aeroer Mak" account id (b26fb248d2c7538a86f475426af32828)
 #
-# Create the Pages project once (name must match --project-name below):
-#   npx wrangler pages project create think-like-programmer --production-branch main
+# The Pages project already exists (created 2026-08-27):
+#   https://think-like-programmer.pages.dev
 #
 # Alternatively, connect the repo directly in the Cloudflare Pages dashboard
 # (build command: `npm run build`, output directory: `out`) and delete this file.
@@ -40,7 +40,8 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          NEXT_PUBLIC_SITE_URL: https://thinklikeprogrammer.dev
+          # Update to the custom domain once one is attached to the Pages project.
+          NEXT_PUBLIC_SITE_URL: https://think-like-programmer.pages.dev
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
