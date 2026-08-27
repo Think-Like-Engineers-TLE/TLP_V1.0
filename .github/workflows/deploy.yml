@@ -1,13 +1,15 @@
 name: Deploy
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
+# Manual-only for now (no push trigger) — deploys are done by hand via
+# `wrangler pages deploy` (see docs/architecture.md). Flip this back to
+# `push: branches: [main]` if/when auto-deploy on merge is wanted.
+#
 # Deploys the static export to Cloudflare Pages.
 #
-# Required repository secrets:
+# Required repository secrets (not yet set — this workflow will fail without them):
 #   CLOUDFLARE_API_TOKEN    - token with "Cloudflare Pages: Edit" permission
 #   CLOUDFLARE_ACCOUNT_ID   - the "Aeroer Mak" account id (b26fb248d2c7538a86f475426af32828)
 #
