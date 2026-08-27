@@ -1,0 +1,52 @@
+name: 📚 Resource submission
+description: Suggest a legally free programming book or resource
+title: "[Resource] "
+labels: ["resource", "triage"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Title
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: Author(s)
+    validations:
+      required: true
+  - type: input
+    id: official
+    attributes:
+      label: Official source URL
+      description: The author's or publisher's official page for the resource.
+    validations:
+      required: true
+  - type: dropdown
+    id: license
+    attributes:
+      label: License basis
+      options:
+        - Public domain
+        - Creative Commons / open license
+        - Author explicitly permits free redistribution
+        - Official publisher free download
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: license-url
+    attributes:
+      label: License URL / evidence
+      description: Link to the license text or the author's permission statement.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: This resource is legally free to read and share — it is not a pirated copy.
+          required: true

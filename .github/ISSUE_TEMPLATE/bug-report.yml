@@ -1,0 +1,20 @@
+name: 🐛 Bug report
+description: Something on the site is broken or wrong
+title: "[Bug] "
+labels: ["bug", "triage"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Include the page URL and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+  - type: input
+    id: env
+    attributes:
+      label: Browser / device
