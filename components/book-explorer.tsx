@@ -100,12 +100,12 @@ function BookExplorerInner({
       <div className="mb-4 flex flex-wrap items-end gap-3">
         {activeFacets.map((facet) =>
           options[facet].length > 1 ? (
-            <label key={facet} className="flex flex-col gap-1 text-xs text-fg-subtle">
+            <label key={facet} className="text-fg-subtle flex flex-col gap-1 text-xs">
               <span className="capitalize">{facet}</span>
               <select
                 value={selected[facet]}
                 onChange={(e) => setParam(facet, e.target.value)}
-                className="h-9 rounded-md border border-line bg-surface px-2 text-sm text-fg"
+                className="border-line bg-surface text-fg h-9 rounded-md border px-2 text-sm"
               >
                 <option value="">All</option>
                 {options[facet].map((v) => (
@@ -118,12 +118,14 @@ function BookExplorerInner({
           ) : null,
         )}
 
-        <label className="ml-auto flex flex-col gap-1 text-xs text-fg-subtle">
+        <label className="text-fg-subtle ml-auto flex flex-col gap-1 text-xs">
           <span>Sort</span>
           <select
             value={sort}
-            onChange={(e) => setParam("sort", e.target.value === DEFAULT_SORT ? "" : e.target.value)}
-            className="h-9 rounded-md border border-line bg-surface px-2 text-sm text-fg"
+            onChange={(e) =>
+              setParam("sort", e.target.value === DEFAULT_SORT ? "" : e.target.value)
+            }
+            className="border-line bg-surface text-fg h-9 rounded-md border px-2 text-sm"
           >
             {SORT_OPTIONS.map((o) => (
               <option key={o.key} value={o.key}>
@@ -134,7 +136,7 @@ function BookExplorerInner({
         </label>
       </div>
 
-      <div className="mb-4 flex flex-wrap items-center gap-2 text-sm text-fg-muted">
+      <div className="text-fg-muted mb-4 flex flex-wrap items-center gap-2 text-sm">
         <span>
           {filtered.length} {filtered.length === 1 ? "resource" : "resources"}
         </span>
@@ -142,7 +144,7 @@ function BookExplorerInner({
           <button
             type="button"
             onClick={clearAll}
-            className="rounded-full border border-line px-2 py-0.5 text-xs text-fg-muted hover:text-fg"
+            className="border-line text-fg-muted hover:text-fg rounded-full border px-2 py-0.5 text-xs"
           >
             Clear {activeCount} {activeCount === 1 ? "filter" : "filters"} ✕
           </button>

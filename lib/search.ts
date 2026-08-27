@@ -81,11 +81,7 @@ export function buildSearchIndex(
 }
 
 /** Rank records against a free-text query. All query tokens must match. */
-export function searchRecords(
-  records: SearchRecord[],
-  query: string,
-  limit = 20,
-): SearchRecord[] {
+export function searchRecords(records: SearchRecord[], query: string, limit = 20): SearchRecord[] {
   const tokens = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
   if (tokens.length === 0) return [];
 

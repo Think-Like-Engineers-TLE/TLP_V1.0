@@ -20,11 +20,11 @@ export function HeaderSearchButton() {
       type="button"
       onClick={() => setOpen(true)}
       aria-label="Search"
-      className="inline-flex h-9 items-center gap-2 rounded-md border border-line bg-surface px-3 text-sm text-fg-subtle transition-colors hover:text-fg"
+      className="border-line bg-surface text-fg-subtle hover:text-fg inline-flex h-9 items-center gap-2 rounded-md border px-3 text-sm transition-colors"
     >
       <span aria-hidden>⌕</span>
       <span className="hidden lg:inline">Search…</span>
-      <kbd className="hidden rounded border border-line bg-bg px-1.5 text-xs lg:inline">
+      <kbd className="border-line bg-bg hidden rounded border px-1.5 text-xs lg:inline">
         {mod} K
       </kbd>
     </button>
@@ -38,11 +38,11 @@ export function HeroSearchButton() {
     <button
       type="button"
       onClick={() => setOpen(true)}
-      className="flex h-11 w-full items-center gap-2 rounded-md border border-line bg-surface px-4 text-sm text-fg-subtle transition-colors hover:border-fg-subtle"
+      className="border-line bg-surface text-fg-subtle hover:border-fg-subtle flex h-11 w-full items-center gap-2 rounded-md border px-4 text-sm transition-colors"
     >
       <span aria-hidden>⌕</span>
       <span>Search programming books…</span>
-      <kbd className="ml-auto rounded border border-line bg-bg px-1.5 py-0.5 text-xs">/</kbd>
+      <kbd className="border-line bg-bg ml-auto rounded border px-1.5 py-0.5 text-xs">/</kbd>
     </button>
   );
 }

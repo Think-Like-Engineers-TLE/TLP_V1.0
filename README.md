@@ -20,9 +20,9 @@ experience, and licensing transparency** around them.
 
 ## Status
 
-**Phase 1 — UI.** Foundation plus the component library and full page layouts
-for the homepage, book library, category / topic / author pages, and book detail
-pages. Search, filters and sorting are next in Phase 3 (see the [roadmap](#roadmap)).
+**Phase 3 — Discovery.** Foundation, full UI, ~19 book entries, and now
+`⌘K` / `/` global search plus URL-driven filters and sorting on the library.
+Remaining before launch: more content, and Phase 5 polish (perf, a11y, deploy).
 
 ## Tech stack
 
@@ -45,8 +45,9 @@ npm run dev        # http://localhost:3000
 Other scripts:
 
 ```bash
-npm run build            # static export to ./out
+npm run build            # static export to ./out (runs search-index first)
 npm run preview          # serve ./out locally
+npm run search-index     # regenerate public/search-index.json
 npm run validate:books   # validate content/books/*.json
 npm run validate         # validate:books + typecheck + lint
 npm run format           # prettier --write .
@@ -63,8 +64,8 @@ app/            Next.js App Router — routes, layout, sitemap, robots
 components/     Header, Footer, ThemeProvider/Toggle, shared UI
 content/        Book / author / topic data (the library index)
   books/        <slug>.json — see content/books/README.md
-lib/            books, validation (Zod schema), categories, search, site config
-scripts/        validate-books.ts (used by CI)
+lib/            books, validation (Zod schema), categories, search, sort, site config
+scripts/        validate-books.ts, build-search-index.ts
 docs/           architecture.md, design-system.md
 .github/        CI + deploy workflows, issue / PR templates
 ```
@@ -79,8 +80,8 @@ Every resource must have a clear license basis for being listed.
 
 - **Phase 0 — Foundation** ✅ setup, design system, CI/CD, deployment
 - **Phase 1 — UI** ✅ component library, homepage, book cards & pages, category / topic / author pages, drawer nav
-- **Phase 2 — Content** book metadata, covers, licenses, sources
-- **Phase 3 — Discovery** search, filters, sorting
+- **Phase 2 — Content** 🚧 19 book entries in; covers + more books ongoing
+- **Phase 3 — Discovery** ✅ `⌘K` / `/` global search, URL-driven filters & sorting on the library
 - **Phase 4 — Open Source** contribution system, validation, templates
 - **Phase 5 — Launch** SEO, performance, a11y, security & legal review
 

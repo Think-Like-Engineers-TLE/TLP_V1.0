@@ -59,9 +59,7 @@ export function SearchProvider({ children }: { children: React.ReactNode }) {
       const target = e.target as HTMLElement | null;
       const typing =
         target &&
-        (target.tagName === "INPUT" ||
-          target.tagName === "TEXTAREA" ||
-          target.isContentEditable);
+        (target.tagName === "INPUT" || target.tagName === "TEXTAREA" || target.isContentEditable);
 
       if ((e.key === "k" || e.key === "K") && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
@@ -164,8 +162,8 @@ function SearchDialog({ onClose }: { onClose: () => void }) {
         onClick={onClose}
         tabIndex={-1}
       />
-      <div className="relative flex max-h-[70vh] w-full max-w-xl flex-col overflow-hidden rounded-lg border border-line bg-bg shadow-2xl">
-        <div className="flex items-center gap-2 border-b border-line px-4">
+      <div className="border-line bg-bg relative flex max-h-[70vh] w-full max-w-xl flex-col overflow-hidden rounded-lg border shadow-2xl">
+        <div className="border-line flex items-center gap-2 border-b px-4">
           <span aria-hidden className="text-fg-subtle">
             ⌕
           </span>
@@ -181,27 +179,31 @@ function SearchDialog({ onClose }: { onClose: () => void }) {
             aria-controls="search-results"
             aria-activedescendant={results.length > 0 ? `search-opt-${active}` : undefined}
             autoComplete="off"
-            className="h-12 flex-1 bg-transparent text-sm text-fg outline-none placeholder:text-fg-subtle"
+            className="text-fg placeholder:text-fg-subtle h-12 flex-1 bg-transparent text-sm outline-none"
           />
-          <kbd className="rounded border border-line bg-surface px-1.5 py-0.5 text-xs text-fg-subtle">
+          <kbd className="border-line bg-surface text-fg-subtle rounded border px-1.5 py-0.5 text-xs">
             Esc
           </kbd>
         </div>
 
         <div className="overflow-y-auto">
           {query.trim() === "" ? (
-            <p className="px-4 py-8 text-center text-sm text-fg-subtle">
+            <p className="text-fg-subtle px-4 py-8 text-center text-sm">
               Type to search the library.
             </p>
           ) : results.length === 0 ? (
-            <p className="px-4 py-8 text-center text-sm text-fg-muted">
-              No results for “{query}”.
-            </p>
+            <p className="text-fg-muted px-4 py-8 text-center text-sm">No results for “{query}”.</p>
           ) : (
-            <div ref={listRef} id="search-results" role="listbox" aria-label="Search results" className="py-2">
+            <div
+              ref={listRef}
+              id="search-results"
+              role="listbox"
+              aria-label="Search results"
+              className="py-2"
+            >
               {groups.map(([type, items]) => (
                 <div key={type} role="group" aria-label={TYPE_LABEL[type]}>
-                  <p className="px-4 pt-2 pb-1 font-mono text-xs tracking-widest text-fg-subtle uppercase">
+                  <p className="text-fg-subtle px-4 pt-2 pb-1 font-mono text-xs tracking-widest uppercase">
                     {TYPE_LABEL[type]}
                   </p>
                   {items.map((r) => {
@@ -220,8 +222,8 @@ function SearchDialog({ onClose }: { onClose: () => void }) {
                           idx === active ? "bg-surface" : ""
                         }`}
                       >
-                        <span className="text-sm text-fg">{r.title}</span>
-                        {r.subtitle && <span className="text-xs text-fg-subtle">{r.subtitle}</span>}
+                        <span className="text-fg text-sm">{r.title}</span>
+                        {r.subtitle && <span className="text-fg-subtle text-xs">{r.subtitle}</span>}
                       </div>
                     );
                   })}

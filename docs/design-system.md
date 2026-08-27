@@ -73,6 +73,17 @@ Palette is anchored on GitHub Primer values (canvas `#0d1117`, accent blue).
 | `EmptyState` | `components/empty-state.tsx` | dashed card |
 | Nav drawer | `components/site-header.tsx` | slide-over on mobile: backdrop, Esc, scroll-lock, focuses close button |
 
-## Not yet designed (Phase 3)
+## Components (Phase 3 — Discovery)
 
-Filter/sort controls, search dialog (`/` and `Ctrl+K`), skeletons/loading states.
+| Component | File | Notes |
+|---|---|---|
+| `SearchProvider` / `useSearch` | `components/search.tsx` | global `⌘K` / `/` listener; renders the dialog; mounted in `layout.tsx` inside `ThemeProvider` |
+| Search dialog | `components/search.tsx` | combobox + listbox a11y, arrow-key nav, groups Books / Topics / Authors; fetches `/search-index.json` once (module-cached) |
+| `HeaderSearchButton` / `HeroSearchButton` | `components/search-trigger.tsx` | open the dialog from the header and homepage hero |
+| `BookExplorer` | `components/book-explorer.tsx` | filter (category/difficulty/language/format/license) + sort; state in URL query params; `<Suspense>` wraps `useSearchParams`, falling back to a plain `BookGrid` for SSG/no-JS |
+
+Search index: `scripts/build-search-index.ts` writes `public/search-index.json` via the `predev` / `prebuild` npm hooks (file is gitignored). `lib/search.ts` holds `buildSearchIndex` + `searchRecords`; `lib/sort.ts` holds the sort keys + `sortBooks`.
+
+## Not yet designed
+
+Skeletons / loading states; multi-select filters; "Popular" sort (needs a privacy-preserving signal — §19).
