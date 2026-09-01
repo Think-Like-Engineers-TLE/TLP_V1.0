@@ -1,0 +1,31 @@
+{
+  "slug": "neural-networks-deep-learning",
+  "title": "Neural Networks and Deep Learning",
+  "author": "Michael Nielsen",
+  "description": "A hands-on introduction to neural networks, built around teaching a network to recognize handwritten digits. Derives backpropagation from first principles, then covers why deep networks are hard to train and the ideas that make deep learning work.",
+  "category": "deep-learning",
+  "subcategory": "Introductory",
+  "tags": ["deep-learning", "neural-networks", "machine-learning", "beginner"],
+  "language": "English",
+  "difficulty": "Intermediate",
+  "publicationYear": 2015,
+  "format": "HTML",
+  "license": {
+    "type": "creative_commons",
+    "name": "Creative Commons Attribution-NonCommercial 3.0 Unported",
+    "url": "https://creativecommons.org/licenses/by-nc/3.0/",
+    "redistributionAllowed": true,
+    "note": "Stated on the book's official site."
+  },
+  "source": {
+    "name": "neuralnetworksanddeeplearning.com (official)",
+    "url": "http://neuralnetworksanddeeplearning.com/"
+  },
+  "download": {
+    "url": "http://neuralnetworksanddeeplearning.com/"
+  },
+  "officialUrl": "http://neuralnetworksanddeeplearning.com/",
+  "featured": true,
+  "status": "published",
+  "addedAt": "2026-09-01"
+}

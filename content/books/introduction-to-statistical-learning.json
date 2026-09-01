@@ -1,0 +1,33 @@
+{
+  "slug": "introduction-to-statistical-learning",
+  "title": "An Introduction to Statistical Learning",
+  "subtitle": "with Applications in R and Python",
+  "author": "Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani",
+  "description": "A broad, applied introduction to statistical learning: linear and logistic regression, resampling, regularization, trees and ensembles, support vector machines, and unsupervised learning, with lab exercises in R and Python.",
+  "category": "machine-learning",
+  "subcategory": "Statistical Learning",
+  "tags": ["machine-learning", "statistics", "r", "python"],
+  "language": "English",
+  "difficulty": "Intermediate",
+  "publicationYear": 2023,
+  "format": "PDF",
+  "cover": "/covers/introduction-to-statistical-learning.jpg",
+  "license": {
+    "type": "official_free_distribution",
+    "name": "Free PDF, all rights reserved (© the authors)",
+    "url": "https://www.statlearning.com/",
+    "redistributionAllowed": false,
+    "note": "The official site offers free PDF downloads of every edition but states \"All Rights Reserved\" with no redistribution license, so TLP links to the official page."
+  },
+  "source": {
+    "name": "statlearning.com (official)",
+    "url": "https://www.statlearning.com/"
+  },
+  "download": {
+    "url": "https://www.statlearning.com/"
+  },
+  "officialUrl": "https://www.statlearning.com/",
+  "featured": true,
+  "status": "published",
+  "addedAt": "2026-09-01"
+}

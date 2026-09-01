@@ -1,0 +1,30 @@
+{
+  "slug": "artificial-intelligence-foundations-computational-agents",
+  "title": "Artificial Intelligence: Foundations of Computational Agents",
+  "author": "David L. Poole, Alan K. Mackworth",
+  "description": "An undergraduate/graduate AI textbook organized around the design of intelligent agents: search, reasoning under uncertainty, planning, learning, and multiagent systems, presented within one coherent agent framework.",
+  "category": "artificial-intelligence",
+  "tags": ["artificial-intelligence", "agents", "reasoning", "machine-learning"],
+  "language": "English",
+  "difficulty": "Advanced",
+  "publicationYear": 2023,
+  "format": "HTML",
+  "license": {
+    "type": "creative_commons",
+    "name": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International",
+    "url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "redistributionAllowed": true,
+    "note": "Stated on the book's official site for the 3rd edition."
+  },
+  "source": {
+    "name": "artint.info (official)",
+    "url": "https://artint.info/"
+  },
+  "download": {
+    "url": "https://artint.info/3e/html/ArtInt3e.html"
+  },
+  "officialUrl": "https://artint.info/3e/html/ArtInt3e.html",
+  "featured": true,
+  "status": "published",
+  "addedAt": "2026-09-01"
+}

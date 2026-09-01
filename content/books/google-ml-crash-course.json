@@ -1,0 +1,31 @@
+{
+  "slug": "google-ml-crash-course",
+  "title": "Machine Learning Crash Course",
+  "author": "Google",
+  "description": "Google's practical, example-driven introduction to machine learning: loss and gradient descent, classification, neural networks, embeddings, fairness, and production ML systems, with interactive exercises using TensorFlow.",
+  "category": "machine-learning",
+  "subcategory": "Introductory",
+  "tags": ["machine-learning", "tensorflow", "beginner"],
+  "language": "English",
+  "difficulty": "Beginner",
+  "publicationYear": 2024,
+  "format": "HTML",
+  "license": {
+    "type": "creative_commons",
+    "name": "Creative Commons Attribution 4.0 International (content); Apache 2.0 (code samples)",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "redistributionAllowed": true,
+    "note": "Stated in Google Developers' site-wide license terms."
+  },
+  "source": {
+    "name": "Google for Developers (official)",
+    "url": "https://developers.google.com/machine-learning/crash-course"
+  },
+  "download": {
+    "url": "https://developers.google.com/machine-learning/crash-course"
+  },
+  "officialUrl": "https://developers.google.com/machine-learning/crash-course",
+  "featured": true,
+  "status": "published",
+  "addedAt": "2026-09-01"
+}

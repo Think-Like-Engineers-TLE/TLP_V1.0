@@ -1,0 +1,33 @@
+{
+  "slug": "foundations-of-data-science",
+  "title": "Foundations of Data Science",
+  "author": "Avrim Blum, John Hopcroft, Ravindran Kannan",
+  "description": "The mathematical and algorithmic underpinnings of data science: high-dimensional geometry, singular value decomposition, random graphs, clustering, and machine-learning theory, aimed at readers who want to understand why the methods work.",
+  "category": "machine-learning",
+  "subcategory": "Theory",
+  "tags": ["data-science", "machine-learning", "algorithms", "mathematics"],
+  "language": "English",
+  "difficulty": "Advanced",
+  "publicationYear": 2018,
+  "format": "PDF",
+  "cover": "/covers/foundations-of-data-science.jpg",
+  "license": {
+    "type": "official_free_distribution",
+    "name": "Free author draft (later published by Cambridge University Press)",
+    "url": "https://www.cs.cornell.edu/jeh/book.pdf",
+    "redistributionAllowed": false,
+    "note": "An earlier draft is hosted free by the authors; the finished book is also sold by Cambridge University Press. TLP links to the free author draft only."
+  },
+  "source": {
+    "name": "Cornell University (author's page)",
+    "url": "https://www.cs.cornell.edu/jeh/book.pdf"
+  },
+  "download": {
+    "url": "https://www.cs.cornell.edu/jeh/book.pdf",
+    "size": "3.5 MB"
+  },
+  "officialUrl": "https://www.cs.cornell.edu/jeh/book.pdf",
+  "featured": false,
+  "status": "published",
+  "addedAt": "2026-09-01"
+}

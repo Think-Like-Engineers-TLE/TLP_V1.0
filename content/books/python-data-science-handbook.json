@@ -1,0 +1,33 @@
+{
+  "slug": "python-data-science-handbook",
+  "title": "Python Data Science Handbook",
+  "subtitle": "Essential Tools for Working with Data",
+  "author": "Jake VanderPlas",
+  "description": "A practical guide to the core Python data-science stack: IPython/Jupyter, NumPy, Pandas, Matplotlib, and Scikit-Learn, with real workflows for cleaning, transforming, visualizing, and modeling data.",
+  "category": "machine-learning",
+  "subcategory": "Data Science",
+  "tags": ["python", "data-science", "pandas", "numpy", "machine-learning"],
+  "language": "English",
+  "difficulty": "Intermediate",
+  "publicationYear": 2016,
+  "format": "HTML",
+  "cover": "/covers/python-data-science-handbook.jpg",
+  "license": {
+    "type": "creative_commons",
+    "name": "Creative Commons Attribution-NonCommercial-NoDerivatives (text); MIT (code)",
+    "url": "https://github.com/jakevdp/PythonDataScienceHandbook#license",
+    "redistributionAllowed": true,
+    "note": "Full text and code published as free Jupyter notebooks on the author's GitHub."
+  },
+  "source": {
+    "name": "jakevdp.github.io (official)",
+    "url": "https://jakevdp.github.io/PythonDataScienceHandbook/"
+  },
+  "download": {
+    "url": "https://jakevdp.github.io/PythonDataScienceHandbook/"
+  },
+  "officialUrl": "https://jakevdp.github.io/PythonDataScienceHandbook/",
+  "featured": true,
+  "status": "published",
+  "addedAt": "2026-09-01"
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "deep-learning-goodfellow",
+  "title": "Deep Learning",
+  "author": "Ian Goodfellow, Yoshua Bengio, Aaron Courville",
+  "description": "The widely cited reference on deep learning: the mathematical background, deep feedforward networks, regularization and optimization, convolutional and recurrent networks, and research topics including generative models.",
+  "category": "deep-learning",
+  "subcategory": "Reference",
+  "tags": ["deep-learning", "neural-networks", "machine-learning"],
+  "language": "English",
+  "difficulty": "Advanced",
+  "publicationYear": 2016,
+  "format": "HTML",
+  "cover": "/covers/deep-learning-goodfellow.jpg",
+  "license": {
+    "type": "official_free_distribution",
+    "name": "Free online pre-publication draft; print rights sold to MIT Press",
+    "url": "https://www.deeplearningbook.org/",
+    "redistributionAllowed": false,
+    "note": "The authors' site states the text may be read free online but not reproduced or redistributed; TLP links to the official page."
+  },
+  "source": {
+    "name": "deeplearningbook.org (official)",
+    "url": "https://www.deeplearningbook.org/"
+  },
+  "download": {
+    "url": "https://www.deeplearningbook.org/"
+  },
+  "officialUrl": "https://www.deeplearningbook.org/",
+  "featured": true,
+  "status": "published",
+  "addedAt": "2026-09-01"
+}

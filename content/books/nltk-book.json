@@ -1,0 +1,32 @@
+{
+  "slug": "nltk-book",
+  "title": "Natural Language Processing with Python",
+  "subtitle": "Analyzing Text with the Natural Language Toolkit",
+  "author": "Steven Bird, Ewan Klein, Edward Loper",
+  "description": "A practical introduction to natural language processing using Python and NLTK: text processing, tagging, classification, parsing grammars, and information extraction, with runnable examples throughout.",
+  "category": "nlp",
+  "tags": ["nlp", "python", "linguistics", "machine-learning"],
+  "language": "English",
+  "difficulty": "Intermediate",
+  "publicationYear": 2024,
+  "format": "HTML",
+  "cover": "/covers/nltk-book.jpg",
+  "license": {
+    "type": "creative_commons",
+    "name": "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 United States",
+    "url": "https://creativecommons.org/licenses/by-nc-nd/3.0/us/",
+    "redistributionAllowed": true,
+    "note": "Distributed alongside the NLTK toolkit under this license; NLTK's own source code is Apache 2.0."
+  },
+  "source": {
+    "name": "nltk.org (official)",
+    "url": "https://www.nltk.org/book/"
+  },
+  "download": {
+    "url": "https://www.nltk.org/book/"
+  },
+  "officialUrl": "https://www.nltk.org/book/",
+  "featured": true,
+  "status": "published",
+  "addedAt": "2026-09-01"
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "speech-and-language-processing",
+  "title": "Speech and Language Processing",
+  "subtitle": "An Introduction to Natural Language Processing, Computational Linguistics, and Speech Recognition (3rd ed. draft)",
+  "author": "Daniel Jurafsky, James H. Martin",
+  "description": "The standard graduate textbook on NLP and computational linguistics: language models, part-of-speech tagging, parsing, information extraction, semantics, and speech recognition. The freely available 3rd edition draft is continuously updated.",
+  "category": "nlp",
+  "tags": ["nlp", "linguistics", "speech-recognition", "machine-learning"],
+  "language": "English",
+  "difficulty": "Advanced",
+  "publicationYear": 2025,
+  "format": "PDF",
+  "cover": "/covers/speech-and-language-processing.jpg",
+  "license": {
+    "type": "official_free_distribution",
+    "name": "Free draft for classroom/personal use (© Jurafsky & Martin)",
+    "url": "https://web.stanford.edu/~jurafsky/slp3/",
+    "redistributionAllowed": false,
+    "note": "The authors post the draft free for use in classes and personal study; TLP links to the official page rather than mirroring the PDF."
+  },
+  "source": {
+    "name": "web.stanford.edu (official author page)",
+    "url": "https://web.stanford.edu/~jurafsky/slp3/"
+  },
+  "download": {
+    "url": "https://web.stanford.edu/~jurafsky/slp3/"
+  },
+  "officialUrl": "https://web.stanford.edu/~jurafsky/slp3/",
+  "featured": true,
+  "status": "published",
+  "addedAt": "2026-09-01"
+}

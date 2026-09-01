@@ -1,0 +1,34 @@
+{
+  "slug": "mathematics-for-machine-learning",
+  "title": "Mathematics for Machine Learning",
+  "author": "Marc Peter Deisenroth, A. Aldo Faisal, Cheng Soon Ong",
+  "description": "The mathematical foundations behind machine learning, taught for ML rather than in the abstract: linear algebra, analytic geometry, matrix decompositions, vector calculus, probability, and optimization, connected to real ML models.",
+  "category": "machine-learning",
+  "subcategory": "Mathematics",
+  "tags": ["machine-learning", "mathematics", "linear-algebra", "statistics"],
+  "language": "English",
+  "difficulty": "Advanced",
+  "publicationYear": 2020,
+  "pages": 398,
+  "format": "PDF",
+  "cover": "/covers/mathematics-for-machine-learning.jpg",
+  "license": {
+    "type": "official_free_distribution",
+    "name": "Free to download for personal use (© Cambridge University Press)",
+    "url": "https://mml-book.com/",
+    "redistributionAllowed": false,
+    "note": "The free PDF is explicitly for personal use, not for redistribution — TLP links to the official file."
+  },
+  "source": {
+    "name": "mml-book.com (official)",
+    "url": "https://mml-book.com/"
+  },
+  "download": {
+    "url": "https://mml-book.com/",
+    "size": "17 MB"
+  },
+  "officialUrl": "https://mml-book.com/",
+  "featured": true,
+  "status": "published",
+  "addedAt": "2026-09-01"
+}

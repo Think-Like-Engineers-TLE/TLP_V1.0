@@ -1,0 +1,31 @@
+{
+  "slug": "computer-vision-algorithms-applications",
+  "title": "Computer Vision: Algorithms and Applications",
+  "author": "Richard Szeliski",
+  "description": "A comprehensive computer vision textbook covering image formation, feature detection, segmentation, structure from motion, stereo, 3D reconstruction, and recognition — with deep-learning approaches added in the 2nd edition.",
+  "category": "computer-vision",
+  "tags": ["computer-vision", "machine-learning", "image-processing"],
+  "language": "English",
+  "difficulty": "Advanced",
+  "publicationYear": 2022,
+  "format": "PDF",
+  "cover": "/covers/computer-vision-algorithms-applications.jpg",
+  "license": {
+    "type": "official_free_distribution",
+    "name": "Free author download; exclusive print license held by Springer",
+    "url": "https://szeliski.org/Book/",
+    "redistributionAllowed": false,
+    "note": "The author offers a free electronic copy from his own site; TLP links there rather than mirroring the PDF."
+  },
+  "source": {
+    "name": "szeliski.org (author's official page)",
+    "url": "https://szeliski.org/Book/"
+  },
+  "download": {
+    "url": "https://szeliski.org/Book/"
+  },
+  "officialUrl": "https://szeliski.org/Book/",
+  "featured": false,
+  "status": "published",
+  "addedAt": "2026-09-01"
+}
